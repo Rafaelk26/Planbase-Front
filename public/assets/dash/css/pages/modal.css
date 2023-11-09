@@ -1,0 +1,325 @@
+/* Configurações do Modal de Despesa */
+
+.input-despesa {
+position: relative;
+}
+
+.inpt-despesa-el, .inpt-despesa-el-select, .inpt-despesa-el-number{
+width: 155px;
+border: solid 1.5px #000000;
+border-radius: 1rem;
+background: none;
+padding: 1rem;
+font-size: 1rem;
+color: #000000;
+transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+}
+.inpt-despesa-el-desc{
+width: 350px;
+height: 270px;
+border: solid 1.5px #000000;
+border-radius: 1rem;
+background: none;
+padding: 1rem;
+font-size: 1rem;
+color: #000000;
+transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.inpt-despesa-el-select:focus-visible{
+    border: 1.5px solid #ff2d2d;
+    outline: transparent;
+    color: #ff9695;
+}
+
+.inpt-despesa-el-select{
+border: solid 1.5px #000000;
+background-color: transparent;
+width: 155px;
+border-radius: 14px;  
+padding: 18px;
+}
+
+.inpt-despesa-el-select:focus {
+outline: none;
+border: 1.5px solid #000000;
+}
+
+
+/* Configurações do Modal de Receita */
+
+
+
+.input-receita {
+position: relative;
+}
+
+.inpt-receita-el, .inpt-receita-el-select, .inpt-receita-el-number{
+width: 155px;
+border: solid 1.5px #000000;
+border-radius: 1rem;
+background: none;
+padding: 1rem;
+font-size: 1rem;
+color: #000000;
+transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+}
+.inpt-receita-el-desc{
+width: 350px;
+height: 270px;
+border: solid 1.5px #000000;
+border-radius: 1rem;
+background: none;
+padding: 1rem;
+font-size: 1rem;
+color: #000000;
+transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.inpt-receita-el-select:focus-visible{
+border: solid 1.5px #000000;
+outline: transparent;
+}
+
+.inpt-receita-el-select{
+border: solid 1.5px #000000;
+background-color: transparent;
+width: 155px;
+border-radius: 14px;  
+padding: 18px;
+}
+
+.inpt-receita-el-select:focus {
+outline: none;
+border: 1.5px solid #000000;
+}
+
+
+.inpt-receita-el:focus, .inpt-receita-el:valid {
+outline: none;
+border: 1.5px solid #52ff00;
+color: #acff85;
+}
+
+.inpt-receita-el:focus ~ label, .inpt-receita-el:valid ~ label {
+transform: translateY(-50%) scale(0.8);
+background-image: linear-gradient(87deg, #11661b, #10641a);
+padding: 0 0.2em;
+color: #acff85;
+}
+
+.inpt-receita-el-data:focus ~ label, .inpt-receita-el-data:valid ~ label {
+transform: translateY(-50%) scale(0.8);
+background-image: linear-gradient(87deg, #0d5f17, #0b5c15);
+padding: 0 0.2em;
+color: #acff85;
+}
+
+
+.input-receita {
+position: relative;
+}
+
+.user-label-receita {
+position: absolute;
+left: 15px;
+color: #000000;
+pointer-events: none;
+transform: translateY(1rem);
+transition: 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+
+.user-label-receita-text-area {
+position: absolute;
+left: 265px;
+color: #000000;
+pointer-events: none;
+transform: translateY(1rem);
+transition: 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.inpt-receita-el-number:focus, .inpt-receita-el-number:valid {
+outline: none;
+border: 1.5px solid #52ff00;
+color: #acff85;
+}
+
+.inpt-receita-el-number:focus ~ label, .inpt-receita-el-number:valid ~ label {
+transform: translateY(-50%) scale(0.8);
+background-image: linear-gradient(90deg, #12691d, #12681c);
+padding: 0 0.2em;
+color: #acff85;
+}
+        
+        
+    
+    
+
+
+.group1-1, 
+.group1-2,
+.group2{
+gap: 10px;
+}
+
+.group-top{
+gap: 20px;
+}
+
+
+
+.user-label-receita {
+position: absolute;
+left: 15px;
+color: #000000;
+pointer-events: none;
+transform: translateY(1rem);
+transition: 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.inpt-despesa-el:focus, .inpt-despesa-el:valid {
+    outline: none;
+    border: 1.5px solid #ff2d2d;
+    color: #ff9695
+    ;
+}
+
+.inpt-despesa-el:focus ~ label, .inpt-despesa-el:valid ~ label {
+transform: translateY(-50%) scale(0.8);
+background-image: linear-gradient(88deg, #8f0909, #860808);
+padding: 0 .2em;
+color: #ff9695
+;
+}
+
+.inpt-despesa-el-data:focus ~ label, .inpt-despesa-el-data:valid ~ label {
+    transform: translateY(-50%) scale(0.8);
+    background-image: linear-gradient(88deg, #7b0606, #770505eb); 
+    padding: 0 .2em;
+    color: #ff9695;
+    ;
+}
+
+
+.user-label-receita {
+position: absolute;
+left: 15px;
+color: #000000;
+pointer-events: none;
+transform: translateY(1rem);
+transition: 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+
+.user-label-receita-text-area {
+position: absolute;
+left: 265px;
+color: #000000;
+pointer-events: none;
+transform: translateY(1rem);
+transition: 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.inpt-despesa-el-number:focus, .inpt-despesa-el-number:valid {
+outline: none;
+border: 1.5px solid #ff2d2d;
+color: #ff9695;
+}
+
+.inpt-despesa-el-number:focus ~ label, .inpt-despesa-el-number:valid ~ label {
+transform: translateY(-50%) scale(0.8);
+background-image: linear-gradient(89deg, #850808, #800707);
+padding: 0 .2em;
+color: #ff9695;
+}
+
+
+
+
+/* Remove as setas de aumento e diminuição */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+appearance: none;
+margin: 0;
+}
+
+
+
+/* Configurações modal de receita */
+.bg-border-black{
+    border-color: #000000;
+}
+.bg-receita{
+    background-image: #fafafa;
+}
+
+.textarea-receita{
+    background-color: transparent;
+    border-color: black;
+    outline-color: #77f94d;
+    color: #acff85;
+}
+
+
+
+
+/* Configurações modal de despesa */
+.bg-border-black{
+    border-color: #000000;
+}
+.bg-despesa{
+    background-image: #fafafa;
+}
+
+.textarea-despesa{
+    background-color: transparent;
+    border-color: black;
+    color: #ff9695;
+    outline-color: #f94d4d;
+}
+
+
+
+
+/* Configuração Modal de Máquina */
+
+.inpts-maquina {
+    position: relative;
+}
+
+.inpt-maquina-el{
+    width: 13.5rem;
+    border: solid 1.5px #000000;
+    border-radius: 1rem;
+    background: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #000000;
+    transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.user-label-receita-maquina {
+    position: absolute;
+    left: 15px;
+    color: #000000;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.inpt-maquina-el:focus, .inpt-maquina-el:valid {
+    outline: none;
+    border: 1.5px solid #000000;
+    color: #000000
+    ;
+}
+
+.inpt-maquina-el:focus ~ label, .inpt-maquina-el:valid ~ label {
+transform: translateY(-50%) scale(0.8);
+background-image: linear-gradient(88deg, #ffffff, #ffffff);
+padding: 0 .2em;
+color: #000000
+;
+}

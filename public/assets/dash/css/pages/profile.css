@@ -1,0 +1,32 @@
+.space-5{
+    gap: 5px
+}
+.space-10{
+    gap: 10px
+}
+.space-15{
+    gap: 15px
+}
+.space-20{
+    gap: 20px
+}
+
+.wrem-1{
+    width: 1rem;
+}
+
+.wrem-2{
+    width: 2rem;
+}
+
+.wrem-5{
+    width: 5rem;
+}
+
+.wrem-10{
+    width: 10rem;
+}
+
+.remove-list{
+    list-style: none;
+}

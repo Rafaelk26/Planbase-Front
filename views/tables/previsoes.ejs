@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="planbase" sizes="100x100" href="/assets/dash/img/logos/logo-planbase100x100.svg">
+  <link rel="icon" type="image/png" href="/assets/dash/img/logos/logo-planbase100x100.svg">
+  <title>
+    PlanBase - Previsões
+  </title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Nucleo Icons -->
+  <link href="/assets/dash/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="/assets/dash/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- CSS Files -->
+  <link id="pagestyle" href="/assets/dash/css/material-dashboard.css?v=3.1.0" rel="stylesheet" />
+  <!-- Tables CSS -->
+  <link rel="stylesheet" href="/assets/dash/css/pages/tables.css">
+  <!-- CSS Position Component -->
+  <link rel="stylesheet" href="/assets/dash/css/pages/position.css">
+  <!-- CSS Modal Component -->
+  <link rel="stylesheet" href="/assets/dash/css/pages/modal.css">
+  <!-- Nepcha Analytics (nepcha.com) -->
+  <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
+  <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+</head>
+
+<body class="g-sidenav-show  bg-gray-200">
+<!-- Aside -->
+<aside
+class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark"
+id="sidenav-main">
+<div class="sidenav-header d-flex justify-content-center p-3">
+  <a class=" m-0 " href="/">
+    <img src="/assets/dash/img/logos/logo3.png" class="img-fluid" alt="main_logo" style="height: 50px; width: 12rem;">
+          </a>
+</div>
+<hr class="horizontal light mt-0 mb-2">
+<div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link text-white" href="/">
+        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+          <i class="material-icons opacity-10">dashboard</i>
+        </div>
+        <span class="nav-link-text ms-1">Dashboard</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="/tables">
+        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+          <i class="material-icons opacity-10">table_view</i>
+        </div>
+        <span class="nav-link-text ms-1">Registros</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="/billing">
+        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+          <i class="material-icons opacity-10">receipt_long</i>
+        </div>
+        <span class="nav-link-text ms-1">Gestão</span>
+      </a>
+    </li>
+    <li class="nav-item mt-3">
+      <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Financeiro</h6>
+    </li>
+    <li class="nav-item">
+      <!-- /tables/entradas-->
+      <a class="nav-link text-white" href="/tables/entradas">
+        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+         <img src="/assets/dash/img/icons/entrada.svg" alt="Entrada">
+        </div>
+        <span class="nav-link-text ms-1">Entradas</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <!-- /tables/saidas -->
+      <a class="nav-link text-white" href="/tables/saidas">
+        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+          <img src="/assets/dash/img/icons/saída.svg" alt="Saída">
+        </div>
+        <span class="nav-link-text ms-1">Saídas</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <!-- /tables/caixa -->
+      <a class="nav-link text-white" href="/tables/caixa">
+        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+          <img src="/assets/dash/img/icons/caixa.svg" alt="Caixa">
+        </div>
+        <span class="nav-link-text ms-1">Caixa</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <!-- /tables/previsao -->
+      <a class="nav-link text-white active bg-gradient-primary" href="/tables/previsao">
+        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+          <img src="/assets/dash/img/icons/previsão.svg" alt="Previsão">
+        </div>
+        <span class="nav-link-text ms-1">Previsão</span>
+      </a>
+    </li>
+
+    <li class="nav-item mt-3">
+      <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Conta</h6>
+    </li>
+    <li class="nav-item">
+      <!-- /profile/:id -->
+      <a class="nav-link text-white " href="/profile">
+        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+          <i class="material-icons opacity-10">person</i>
+        </div>
+        <span class="nav-link-text ms-1">Profile</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <!-- /faq -->
+      <a class="nav-link text-white " href="/faq">
+        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+          <img src="/assets/dash/img/dúvida.svg" alt="Dúvidas">
+        </div>
+        <span class="nav-link-text ms-1">FAQ</span>
+      </a>
+    </li>
+  </ul>
+</div>
+    <!-- Footer -->
+    <footer class="footer py-2 d-flex flex-column justify-content-center">
+      <div class="copyright text-center text-sm text-muted text-lg-center">
+        Copyright © Planbase
+        <script>
+          document.write(new Date().getFullYear())
+        </script>
+      </div>
+      <!-- /devs -->
+      <a class="nav-link text-white d-flex justify-content-start" href="/devs">
+        <img class="ms-4" src="/assets/dash/img/icons/code.svg" alt="Code">
+        <span class="nav-link-text ms-2">Conheça os Devs!</span>
+      </a>
+    </footer>
+    <!-- Footer End -->
+</aside>
+<!-- Aside end -->
+
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <!-- Navbar -->
+        <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
+        data-scroll="true">
+        <div class="container-fluid py-1 px-3">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+              <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
+              <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
+            </ol>
+            <h6 class="font-weight-bolder mb-0">Dashboard</h6>
+          </nav>
+          <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+            <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+            </div>
+            <ul class="navbar-nav  justify-content-end">
+              <li class="nav-item d-flex align-items-center d-none">
+                <a href="/adm/login/" class="nav-link text-body font-weight-bold px-0">
+                  <span class="d-sm-inline d-none">Administrador</span>
+                </a>
+              </li>
+              <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+                <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                  <div class="sidenav-toggler-inner">
+                    <i class="sidenav-toggler-line"></i>
+                    <i class="sidenav-toggler-line"></i>
+                    <i class="sidenav-toggler-line"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item px-3 d-flex align-items-center">
+                <a href="javascript:;" class="nav-link text-body p-0">
+                  <lord-icon class="fixed-plugin-button-nav cursor-pointer" src="https://cdn.lordicon.com/dycatgju.json"
+                    trigger="hover" colors="primary:#7b809a" style="width:20px;height:20px">
+                  </lord-icon>
+                </a>
+              </li>
+              <li class="nav-item d-flex align-items-center">
+                <div class="dropdown">
+                  <a href="#" class="d-flex align-items-center text-white text-decoration-none" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="https://github.com/mdo.png" alt="hugenerd" width="40" height="40" class="rounded-circle">
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark text-small shadow dropdown-menu-end">
+                    <li><a class="dropdown-item" href="/profile">Perfil</a></li>
+                    <li>
+                      <h6 class="m-0 ms-3 mt-3 text-uppercase text-xs text-white font-weight-bolder opacity-8">Sair</h6>
+                    </li>
+                    <li><a class="dropdown-item" href="/login">Logout</a></li>
+                </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+    
+    <!-- Content -->
+    <div class="container-fluid py-4">
+       <!-- Card de Resultados Mensais -->
+       <div class="row mt-4 d-flex justify-content-center">
+        <div class="col-lg-12 col-md-12 mt-4 mb-4">
+          <div class="card z-index-2  ">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+              <div class="bg-gradient-dark shadow-dark border-radius-lg py-3 pe-1">
+                <!-- table -->
+                <div>
+                  <canvas id="myChart" class="w-100" style="height: 50vh;"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <h6 class="mb-0 "> Resultados Mensais </h6>
+              <p class="text-sm ">Dados baseados nos resultados mensais finais do caixa.</p>
+              <hr class="dark horizontal">
+              <div class="d-flex gap-1">
+                <img src="/assets/dash/img/icons/calendar.svg" alt="Calendário" style="width: 20px;">
+                <p class="mb-0 text-sm"> Resultados pós viradas mensais. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card de Resultados Mensais End -->
+
+      <!-- Tabela de Previsões -->
+      <div class="card my-4">
+        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+          <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3 d-flex align-items-center">
+            <h6 class="text-white text-capitalize ps-3">Futuras Previsões</h6>
+            <div class="group-data-search w-20 ms-auto me-3 d-flex align-items-center gap-3">
+              <input type="date" name="dataSelecionada" id="dataSelecionada">
+              <button type="button" class="btn bg-gradient-dark m-0 d-flex justify-content-center" id="acharData">
+                <img src="/assets/dash/img/icons/search.svg" alt="Pesquisar">
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card-body px-0 pb-2">
+          <div class="table-responsive p-0" style="max-height: 22em;">
+            <table class="table align-items-center mb-0">
+              <thead>
+                <tr>
+                  <th class="text-uppercase text-secondary text-dark font-weight-bolder opacity-10 text-sm">Titulo
+                  </th>
+                  <th class="text-uppercase text-center text-dark text-sm font-weight-bolder opacity-10 ps-2">Data
+                  </th>
+                  <th
+                    class="text-uppercase text-center text-secondary text-dark text-sm font-weight-bolder opacity-10 ps-2">
+                    Valor</th>
+                  <th
+                    class="text-center text-uppercase text-secondary text-dark text-sm font-weight-bolder opacity-10">
+                    Histórico
+                  </th>
+                  <th
+                    class="text-center text-uppercase text-secondary text-dark text-sm font-weight-bolder opacity-10">
+                    Status
+                  </th>
+                  <th
+                    class="text-center text-uppercase text-secondary text-dark text-sm font-weight-bolder opacity-10">
+                    Fornecedor
+                  </th>
+                  <th
+                  class="text-center text-uppercase text-secondary text-dark text-sm font-weight-bolder opacity-10">
+                  Destinatário
+                </th>
+                <th
+                class="text-center text-uppercase text-secondary text-dark text-sm font-weight-bolder opacity-10">
+                Nota Fiscal
+                </th>
+                    <th
+                    class="text-center text-uppercase text-secondary text-dark text-sm font-weight-bolder opacity-10">
+                    Pagamento
+                  </th>
+                  <th
+                      class="text-center text-uppercase text-secondary text-dark text-sm font-weight-bolder opacity-10">
+                      Qtd. Parcela</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Card das receitas de modelo -->
+                <tr>
+                  <td>
+                    <div class="d-flex px-2 py-1">
+                      <div>
+                        <img src="/assets/dash/img/Receita.jpg" class="avatar avatar-sm me-3 border-radius-lg"
+                          alt="user1">
+                      </div>
+                      <!-- Titulo -->
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="mb-0 text-sm">Faturamento de 30%</h6>
+                        <p class="text-xs text-secondary mb-0">Operacional</p>
+                      </div>
+                    </div>
+                  </td>
+                  <!-- Data -->
+                  <td class="text-center">
+                    <span class="text-secondary text-xs font-weight-bold">09/10/2023</span>
+                  </td>
+                  <!-- Valor -->
+                  <td class="align-middle text-sm text-center">
+                    <span class="text-secondary text-center text-xs font-weight-bold">R$<span class="value-table-receita">408,54</span></span>
+                  </td>
+                  <!-- Histórico -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Venda efetuada para cliente José...
+                    </span>
+                  </td>
+                  <!-- Status -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Pendente
+                    </span>
+                  </td>
+                  <!-- Fornecedor -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Coca-Cola Brasil
+                    </span>
+                  </td>
+                  <!-- Destinatário -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Santander S.A
+                    </span>
+                  </td>
+                  <!-- Nota Fiscal -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      08420134182
+                    </span>
+                  </td>
+                  <!-- Pagamento -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Cartão de Crédito
+                    </span>
+                  </td>
+                  <!-- Qtd. Parcela -->
+                  <td class="align-middle text-center">
+                    <div class="progress-wrapper w-50 d-flex align-items-center gap-2 mx-auto">
+                      <div class="progress-info">
+                        <div class="progress-percentage">
+                          <span class="text-xs font-weight-bold">4/4</span>
+                        </div>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar bg-gradient-success w-100" role="progressbar" aria-valuenow="100"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+
+                 <!-- Card das receitas de modelo -->
+                 <tr>
+                  <td>
+                    <div class="d-flex px-2 py-1">
+                      <div>
+                        <img src="/assets/dash/img/Receita.jpg" class="avatar avatar-sm me-3 border-radius-lg"
+                          alt="user1">
+                      </div>
+                      <!-- Titulo -->
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="mb-0 text-sm">Registro</h6>
+                        <p class="text-xs text-secondary mb-0">Operacional</p>
+                      </div>
+                    </div>
+                  </td>
+                  <!-- Data -->
+                  <td class="text-center">
+                    <span class="text-secondary text-xs font-weight-bold">17/10/2023</span>
+                  </td>
+                  <!-- Valor -->
+                  <td class="align-middle text-sm text-center">
+                    <span class="text-secondary text-center text-xs font-weight-bold">R$<span class="value-table-receita">126,78</span></span>
+                  </td>
+                  <!-- Histórico -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Registro feito para...
+                    </span>
+                  </td>
+                  <!-- Status -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Pendente
+                    </span>
+                  </td>
+                  <!-- Fornecedor -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Coca-Cola Brasil
+                    </span>
+                  </td>
+                  <!-- Destinatário -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Santander S.A
+                    </span>
+                  </td>
+                  <!-- Nota Fiscal -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      0842013292
+                    </span>
+                  </td>
+                  <!-- Pagamento -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Cartão de Crédito
+                    </span>
+                  </td>
+                  <!-- Qtd. Parcela -->
+                  <td class="align-middle text-center">
+                    <div class="progress-wrapper w-50 d-flex align-items-center gap-2 mx-auto">
+                      <div class="progress-info">
+                        <div class="progress-percentage">
+                          <span class="text-xs font-weight-bold">3/4</span>
+                        </div>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar bg-gradient-success w-75" role="progressbar" aria-valuenow="75"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                
+                 <!-- Card das receitas de modelo -->
+                 <tr>
+                  <td>
+                    <div class="d-flex px-2 py-1">
+                      <div>
+                        <img src="/assets/dash/img/Receita.jpg" class="avatar avatar-sm me-3 border-radius-lg"
+                          alt="user1">
+                      </div>
+                      <!-- Titulo -->
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="mb-0 text-sm">Registro</h6>
+                        <p class="text-xs text-secondary mb-0">Operacional</p>
+                      </div>
+                    </div>
+                  </td>
+                  <!-- Data -->
+                  <td class="text-center">
+                    <span class="text-secondary text-xs font-weight-bold">20/10/2023</span>
+                  </td>
+                  <!-- Valor -->
+                  <td class="align-middle text-sm text-center">
+                    <span class="text-secondary text-center text-xs font-weight-bold">R$<span class="value-table-receita">26,78</span></span>
+                  </td>
+                  <!-- Histórico -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Registro feito para...
+                    </span>
+                  </td>
+                  <!-- Status -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Pendente
+                    </span>
+                  </td>
+                  <!-- Fornecedor -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Coca-Cola Brasil
+                    </span>
+                  </td>
+                  <!-- Destinatário -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Santander S.A
+                    </span>
+                  </td>
+                  <!-- Nota Fiscal -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      08420134182
+                    </span>
+                  </td>
+                  <!-- Pagamento -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Cartão de Crédito
+                    </span>
+                  </td>
+                  <!-- Qtd. Parcela -->
+                  <td class="align-middle text-center">
+                    <div class="progress-wrapper w-50 d-flex align-items-center gap-2 mx-auto">
+                      <div class="progress-info">
+                        <div class="progress-percentage">
+                          <span class="text-xs font-weight-bold">1/4</span>
+                        </div>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar bg-gradient-success w-25" role="progressbar" aria-valuenow="25"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                
+                 <!-- Card das receitas de modelo -->
+                 <tr>
+                  <td>
+                    <div class="d-flex px-2 py-1">
+                      <div>
+                        <img src="/assets/dash/img/Receita.jpg" class="avatar avatar-sm me-3 border-radius-lg"
+                          alt="user1">
+                      </div>
+                      <!-- Titulo -->
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="mb-0 text-sm">Registro</h6>
+                        <p class="text-xs text-secondary mb-0">Operacional</p>
+                      </div>
+                    </div>
+                  </td>
+                  <!-- Data -->
+                  <td class="text-center">
+                    <span class="text-secondary text-xs font-weight-bold">18/10/2023</span>
+                  </td>
+                  <!-- Valor -->
+                  <td class="align-middle text-sm text-center">
+                    <span class="text-secondary text-center text-xs font-weight-bold">R$<span class="value-table-receita">236,78</span></span>
+                  </td>
+                  <!-- Histórico -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Registro feito para...
+                    </span>
+                  </td>
+                  <!-- Status -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Efetuado
+                    </span>
+                  </td>
+                  <!-- Fornecedor -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Não
+                    </span>
+                  </td>
+                    <!-- Destinatário -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Caixa Econômica Federal
+                    </span>
+                  </td>
+                  <!-- Nota Fiscal -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      0472059292
+                    </span>
+                  </td>
+                  <!-- Pagamento -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Cartão de Crédito
+                    </span>
+                  </td>
+                  <!-- Qtd. Parcela -->
+                  <td class="align-middle text-center">
+                    <div class="progress-wrapper w-50 d-flex align-items-center gap-2 mx-auto">
+                      <div class="progress-info">
+                        <div class="progress-percentage">
+                          <span class="text-xs font-weight-bold">2/4</span>
+                        </div>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar bg-gradient-success w-50" role="progressbar" aria-valuenow="50"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Card das receitas de modelo -->
+                <tr>
+                  <td>
+                    <div class="d-flex px-2 py-1">
+                      <div>
+                        <img src="/assets/dash/img/Receita.jpg" class="avatar avatar-sm me-3 border-radius-lg"
+                          alt="user1">
+                      </div>
+                      <!-- Titulo -->
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="mb-0 text-sm">Registro</h6>
+                        <p class="text-xs text-secondary mb-0">Operacional</p>
+                      </div>
+                    </div>
+                  </td>
+                  <!-- Data -->
+                  <td class="text-center">
+                    <span class="text-secondary text-xs font-weight-bold">18/10/2023</span>
+                  </td>
+                  <!-- Valor -->
+                  <td class="align-middle text-sm text-center">
+                    <span class="text-secondary text-center text-xs font-weight-bold">R$<span class="value-table-receita">236,78</span></span>
+                  </td>
+                  <!-- Histórico -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Registro feito para...
+                    </span>
+                  </td>
+                  <!-- Status -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Efetuado
+                    </span>
+                  </td>
+                  <!-- Fornecedor -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Não
+                    </span>
+                  </td>
+                    <!-- Destinatário -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Caixa Econômica Federal
+                    </span>
+                  </td>
+                  <!-- Nota Fiscal -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      0472059292
+                    </span>
+                  </td>
+                  <!-- Pagamento -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Cartão de Crédito
+                    </span>
+                  </td>
+                  <!-- Qtd. Parcela -->
+                  <td class="align-middle text-center">
+                    <div class="progress-wrapper w-50 d-flex align-items-center gap-2 mx-auto">
+                      <div class="progress-info">
+                        <div class="progress-percentage">
+                          <span class="text-xs font-weight-bold">2/4</span>
+                        </div>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar bg-gradient-success w-50" role="progressbar" aria-valuenow="50"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Card das receitas de modelo -->
+                <tr>
+                  <td>
+                    <div class="d-flex px-2 py-1">
+                      <div>
+                        <img src="/assets/dash/img/Receita.jpg" class="avatar avatar-sm me-3 border-radius-lg"
+                          alt="user1">
+                      </div>
+                      <!-- Titulo -->
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="mb-0 text-sm">Registro</h6>
+                        <p class="text-xs text-secondary mb-0">Operacional</p>
+                      </div>
+                    </div>
+                  </td>
+                  <!-- Data -->
+                  <td class="text-center">
+                    <span class="text-secondary text-xs font-weight-bold">18/10/2023</span>
+                  </td>
+                  <!-- Valor -->
+                  <td class="align-middle text-sm text-center">
+                    <span class="text-secondary text-center text-xs font-weight-bold">R$<span class="value-table-receita">236,78</span></span>
+                  </td>
+                  <!-- Histórico -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Registro feito para...
+                    </span>
+                  </td>
+                  <!-- Status -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Pendente
+                    </span>
+                  </td>
+                  <!-- Fornecedor -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Coca-Cola Brasil
+                    </span>
+                  </td>
+                  <!-- Destinatário -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Santander S.A
+                    </span>
+                  </td>
+                  <!-- Nota Fiscal -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      0472059292
+                    </span>
+                  </td>
+                  <!-- Pagamento -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Cartão de Crédito
+                    </span>
+                  </td>
+                  <!-- Qtd. Parcela -->
+                  <td class="align-middle text-center">
+                    <div class="progress-wrapper w-50 d-flex align-items-center gap-2 mx-auto">
+                      <div class="progress-info">
+                        <div class="progress-percentage">
+                          <span class="text-xs font-weight-bold">2/4</span>
+                        </div>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar bg-gradient-success w-50" role="progressbar" aria-valuenow="50"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Card das receitas de modelo -->
+                <tr>
+                  <td>
+                    <div class="d-flex px-2 py-1">
+                      <div>
+                        <img src="/assets/dash/img/Receita.jpg" class="avatar avatar-sm me-3 border-radius-lg"
+                          alt="user1">
+                      </div>
+                      <!-- Titulo -->
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="mb-0 text-sm">Registro</h6>
+                        <p class="text-xs text-secondary mb-0">Operacional</p>
+                      </div>
+                    </div>
+                  </td>
+                  <!-- Data -->
+                  <td class="text-center">
+                    <span class="text-secondary text-xs font-weight-bold">18/10/2023</span>
+                  </td>
+                  <!-- Valor -->
+                  <td class="align-middle text-sm text-center">
+                    <span class="text-secondary text-center text-xs font-weight-bold">R$<span class="value-table-receita">236,78</span></span>
+                  </td>
+                  <!-- Histórico -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Registro feito para...
+                    </span>
+                  </td>
+                  <!-- Status -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Pendente
+                    </span>
+                  </td>
+                  <!-- Fornecedor -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Coca-Cola Brasil
+                    </span>
+                  </td>
+                  <!-- Destinatário -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Santander S.A
+                    </span>
+                  </td>
+                  <!-- Nota Fiscal -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      0472059292
+                    </span>
+                  </td>
+                  <!-- Pagamento -->
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">
+                      Cartão de Crédito
+                    </span>
+                  </td>
+                  <!-- Qtd. Parcela -->
+                  <td class="align-middle text-center">
+                    <div class="progress-wrapper w-50 d-flex align-items-center gap-2 mx-auto">
+                      <div class="progress-info">
+                        <div class="progress-percentage">
+                          <span class="text-xs font-weight-bold">2/4</span>
+                        </div>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar bg-gradient-success w-50" role="progressbar" aria-valuenow="50"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <div class="card-header p-0 position-relative mt-4 mx-3 z-index-2">
+            <div class="bg-gradient-primary shadow-primary border-radius-lg d-flex justify-content-between pt-3 pb-2">
+              <h6 class="text-white ps-3">Valores à Receber</h6>
+              <h6 class="m-0 me-4 text-white">R$<span class="font-weight-bold" id="value-insert-receita-here">0.00</span></h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fim Tabela de Previsões -->
+    </div>
+    <!-- Content End -->
+  </main>
+  <div class="fixed-plugin">
+  <!-- Navbar Lateral de Configurações -->
+  <div class="card shadow-lg">
+    <div class="card-header pb-0 pt-3">
+      <div class="float-start d-flex justify-content-center mt-3">
+        <img class="w-100 img-fluid" src="/assets/dash/img/logos/logo3.png" alt="Logo Planbase">
+      </div>
+      <div class="float-end">
+        <button class="btn btn-link text-dark p-0 fixed-plugin-close-button">
+          <i class="material-icons">clear</i>
+        </button>
+      </div>
+      <!-- End Toggle Button -->
+    </div>
+    <hr class="horizontal dark my-1">
+    <div class="card-body pt-sm-3 pt-0">
+      <!-- Sidebar Backgrounds -->
+      <div>
+        <h6 class="mb-0">Temas para Escolha</h6>
+      </div>
+      <a href="javascript:void(0)" class="switch-trigger background-color">
+        <div class="badge-colors my-2 text-start">
+          <span class="badge filter bg-gradient-primary active" data-color="primary"
+            onclick="sidebarColor(this)"></span>
+          <span class="badge filter bg-gradient-dark" data-color="dark" onclick="sidebarColor(this)"></span>
+          <span class="badge filter bg-gradient-info" data-color="info" onclick="sidebarColor(this)"></span>
+          <span class="badge filter bg-gradient-success" data-color="success" onclick="sidebarColor(this)"></span>
+          <span class="badge filter bg-gradient-warning" data-color="warning" onclick="sidebarColor(this)"></span>
+          <span class="badge filter bg-gradient-danger" data-color="danger" onclick="sidebarColor(this)"></span>
+        </div>
+      </a>
+      <!-- Temas -->
+      <div class="mt-3">
+        <h6 class="mb-0">Temas</h6>
+        <p class="text-sm">Escolha essas opções para sua comodidade.</p>
+      </div>
+      <div class="d-flex">
+        <button class="btn bg-gradient-dark px-3 mb-2 active" data-class="bg-gradient-dark"
+          onclick="sidebarType(this)">Dark</button>
+        <button class="btn bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-transparent"
+          onclick="sidebarType(this)">Transparente</button>
+        <button class="btn bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-white"
+          onclick="sidebarType(this)">Branco</button>
+      </div>
+      <!-- Navbar Fixed -->
+      <hr class="horizontal dark my-3">
+      <div class="mt-2 d-flex">
+        <h6 class="mb-0">Claro / Escuro</h6>
+        <div class="form-check form-switch ps-0 ms-auto my-auto">
+          <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Navbar Lateral de Configurações Final -->
+    <!--   Core JS Files   -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/assets/dash/js/core/popper.min.js"></script>
+    <script src="/assets/dash/js/core/bootstrap.min.js"></script>
+    <script src="/assets/dash/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="/assets/dash/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="/assets/dash/js/pages/previsoes/previsoesTable.js"></script>
+    <script src="/assets/dash/js/pages/modal.js"></script>
+    <script>
+      var win = navigator.platform.indexOf('Win') > -1;
+      if (win && document.querySelector('#sidenav-scrollbar')) {
+        var options = {
+          damping: '0.5'
+        }
+        Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+      }
+    </script>
+    <script>
+      const botaoPesquisar = document.getElementById("acharData");
+      const inputData = document.getElementById("dataSelecionada");
+      const linhas = document.querySelectorAll("tbody tr");
+
+      botaoPesquisar.addEventListener("click", function () {
+          filtrarLinhas();
+      });
+
+      inputData.addEventListener("input", function () {
+          mostrarLinhas();
+      });
+
+      function filtrarLinhas() {
+          const dataSelecionada = inputData.value;
+
+          linhas.forEach((linha) => {
+              const dataNaLinha = linha.querySelector("td:nth-child(2) span").textContent;
+              const dataFormatada = formatarData(dataSelecionada);
+
+              if (dataFormatada === "" || dataNaLinha === dataFormatada) {
+                  linha.style.display = "";
+              } else {
+                  linha.style.display = "none";
+              }
+          });
+      }
+
+      function mostrarLinhas() {
+          const dataSelecionada = inputData.value;
+
+          linhas.forEach((linha) => {
+              const dataNaLinha = linha.querySelector("td:nth-child(2) span").textContent;
+              const dataFormatada = formatarData(dataSelecionada);
+
+              if (dataFormatada === "") {
+                  linha.style.display = "";
+              }
+          });
+      }
+
+      function formatarData(data) {
+          if (data) {
+              const partes = data.split("-");
+              if (partes.length === 3) {
+                  const dia = partes[2];
+                  const mes = partes[1];
+                  const ano = partes[0];
+                  return `${dia}/${mes}/${ano}`;
+              }
+          }
+          return "";
+      }
+    </script>
+    <!-- Github buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="/assets/dash/js/material-dashboard.min.js"></script>
+    <script src="/assets/dash/js/pages/previsoes.js"></script>
+    <!-- Conexão com o Back-end via Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Resgata todos os registros do banco -->
+    <script src="/assets/dash/js/connection/tables/registrosAll.js"></script>
+    
+</body>
+</html>

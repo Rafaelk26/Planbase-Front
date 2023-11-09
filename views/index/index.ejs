@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="planbase" sizes="100x100" href="/assets/dash/img/logos/logo-planbase100x100.svg">
+  <link rel="icon" type="image/png" href="/assets/dash/img/logos/logo-planbase100x100.svg">
+  <title>
+    PlanBase - Dashboard
+  </title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Nucleo Icons -->
+  <link href="/assets/dash/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="/assets/dash/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- CSS Files -->
+  <link id="pagestyle" href="/assets/dash/css/material-dashboard.css" rel="stylesheet" />
+  <!-- Index CSS -->
+  <link rel="stylesheet" href="/assets/dash/css/pages/index.css">
+  <!-- CSS Position Component -->
+  <link rel="stylesheet" href="/assets/dash/css/pages/position.css">
+  <!-- CSS Modal Component -->
+  <link rel="stylesheet" href="/assets/dash/css/pages/modal.css">
+  <!-- Nepcha Analytics (nepcha.com) -->
+  <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
+  <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+</head>
+
+<body class="g-sidenav-show  bg-gray-200">
+  <!-- Aside -->
+  <aside
+    class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark"
+    id="sidenav-main">
+    <div class="sidenav-header d-flex justify-content-center p-3">
+      <a class=" m-0 " href="/">
+        <img src="/assets/dash/img/logos/logo3.png" class="img-fluid" alt="main_logo" style="height: 50px; width: 12rem;">
+              </a>
+    </div>
+    <hr class="horizontal light mt-0 mb-2">
+    <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-white active bg-gradient-primary" href="/">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">dashboard</i>
+            </div>
+            <span class="nav-link-text ms-1">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="/tables">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">table_view</i>
+            </div>
+            <span class="nav-link-text ms-1">Registros</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="/billing">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">receipt_long</i>
+            </div>
+            <span class="nav-link-text ms-1">Gestão</span>
+          </a>
+        </li>
+        <li class="nav-item mt-3">
+          <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Financeiro</h6>
+        </li>
+        <li class="nav-item">
+          <!-- /tables/entradas-->
+          <a class="nav-link text-white " href="/tables/entradas">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+             <img src="/assets/dash/img/icons/entrada.svg" alt="Entrada">
+            </div>
+            <span class="nav-link-text ms-1">Entradas</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <!-- /tables/saidas -->
+          <a class="nav-link text-white " href="/tables/saidas">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <img src="/assets/dash/img/icons/saída.svg" alt="Saída">
+            </div>
+            <span class="nav-link-text ms-1">Saídas</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <!-- /tables/caixa -->
+          <a class="nav-link text-white " href="/tables/caixa">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <img class="material-icons" src="/assets/dash/img/icons/caixa.svg" alt="Caixa">
+            </div>
+            <span class="nav-link-text ms-1">Caixa</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <!-- /tables/previsao -->
+          <a class="nav-link text-white" href="/tables/previsao">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <img src="/assets/dash/img/icons/previsão.svg" alt="Previsão">
+            </div>
+            <span class="nav-link-text ms-1">Previsão</span>
+          </a>
+        </li>
+
+        <li class="nav-item mt-3">
+          <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Conta</h6>
+        </li>
+        <li class="nav-item">
+          <!-- /profile/:id -->
+          <a class="nav-link text-white " href="/profile">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">person</i>
+            </div>
+            <span class="nav-link-text ms-1">Profile</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <!-- /faq -->
+          <a class="nav-link text-white " href="/faq">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <img src="/assets/dash/img/dúvida.svg" alt="Dúvidas">
+            </div>
+            <span class="nav-link-text ms-1">FAQ</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Footer -->
+    <footer class="footer py-2 d-flex flex-column justify-content-center">
+      <div class="copyright text-center text-sm text-muted text-lg-center">
+        Copyright © Planbase
+        <script>
+          document.write(new Date().getFullYear())
+        </script>
+      </div>
+      <!-- /devs -->
+      <a class="nav-link text-white d-flex justify-content-start" href="/devs">
+        <img class="ms-4" src="/assets/dash/img/icons/code.svg" alt="Code">
+        <span class="nav-link-text ms-2">Conheça os Devs!</span>
+      </a>
+    </footer>
+    <!-- Footer End -->
+  </aside>
+  <!-- Aside end -->
+
+  <!-- Main -->
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
+      data-scroll="true">
+      <div class="container-fluid py-1 px-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
+          </ol>
+          <h6 class="font-weight-bolder mb-0">Dashboard</h6>
+        </nav>
+        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+          <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+          </div>
+          <ul class="navbar-nav  justify-content-end">
+            <li class="nav-item d-flex align-items-center d-none">
+              <a href="/adm/login/" class="nav-link text-body font-weight-bold px-0">
+                <span class="d-sm-inline d-none">Administrador</span>
+              </a>
+            </li>
+            <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                <div class="sidenav-toggler-inner">
+                  <i class="sidenav-toggler-line"></i>
+                  <i class="sidenav-toggler-line"></i>
+                  <i class="sidenav-toggler-line"></i>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item px-3 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-body p-0">
+                <lord-icon class="fixed-plugin-button-nav cursor-pointer" src="https://cdn.lordicon.com/dycatgju.json"
+                  trigger="hover" colors="primary:#7b809a" style="width:20px;height:20px">
+                </lord-icon>
+              </a>
+            </li>
+            <li class="nav-item d-flex align-items-center">
+              <div class="dropdown">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://github.com/mdo.png" alt="hugenerd" width="40" height="40" class="rounded-circle">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark text-small shadow dropdown-menu-end">
+                  <li><a class="dropdown-item" href="/profile">Perfil</a></li>
+                  <li>
+                    <h6 class="m-0 ms-3 mt-3 text-uppercase text-xs text-white font-weight-bolder opacity-8">Sair</h6>
+                  </li>
+                  <li><a class="dropdown-item" href="/login">Logout</a></li>
+              </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+
+    <!-- Content -->
+    <div class="container-fluid py-4">
+
+      <!-- Rows Cards -->
+      <div class="row p-3">
+
+        <!-- Card Registro -->
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card card-register h-100">
+            <div class="card-header p-3 pt-2">
+              <!-- Icon -->
+              <div
+                class="icon icon-lg icon-shape card-register-icon shadow-dark text-center border-radius-xl mt-n4 position-absolute d-flex justify-content-center align-items-center">
+                <img src="/assets/dash/img/icons-gif/registro.gif" alt="Registro">
+              </div>
+              <div class="text-end pt-1">
+                <!-- Titulo -->
+                <p class="text-md font-weight-bold mb-0 text-capitalize">Registros</p>
+                <!-- Valor -->
+                <h4 class="mb-0 number-register fs-4" id="NumbersRegisterInsertofBack">0</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card Registro End -->
+
+        <!-- Card Entrada -->
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card card-entrance h-100 cursor-pointer" data-bs-toggle="modal"
+          data-bs-target="#modalEntradaCard" data-bs-whatever="Entrada">
+            <div class="card-header p-3 pt-2">
+              <!-- Icon -->
+              <div
+                class="icon icon-lg icon-shape card-entrance-icon shadow-primary text-center border-radius-xl mt-n4 position-absolute d-flex justify-content-center align-items-center">
+                <img src="/assets/dash/img/icons-gif/receita.gif" alt="Subida">
+              </div>
+              <div class="text-end pt-1">
+                <!-- Titulo -->
+                <p class="text-md font-weight-bold mb-0 text-capitalize">Entradas</p>
+                <!-- Valor -->
+                <h4 class="mb-0 number-entrance fs-4" id="EntranceInsertofBack">0.00</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card Entrada End -->
+
+        <!-- Card Saída -->
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card card-invoice h-100 cursor-pointer" data-bs-toggle="modal"
+          data-bs-target="#modalSaidaCard" data-bs-whatever="Saída">
+            <div class="card-header p-3 pt-2">
+              <!-- Icon -->
+              <div
+                class="icon icon-lg icon-shape card-invoice-icon shadow-success text-center border-radius-xl mt-n4 position-absolute d-flex justify-content-center align-items-center">
+                <img src="/assets/dash/img/icons-gif/despesa.gif" alt="Descida">
+              </div>
+              <div class="text-end pt-1">
+                <!-- Titulo -->
+                <p class="text-md font-weight-bold mb-0 text-capitalize">Saídas</p>
+                <!-- Valor -->
+                <h4 class="mb-0 number-invoice fs-4" id="ExitInsertofBack">0.00</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card Saída End -->
+
+        <!-- Card Caixa -->
+        <div class="col-xl-3 col-sm-6">
+          <div class="card card-total">
+            <div class="card-header p-3 pt-2">
+              <!-- Icon -->
+              <div
+                class="icon icon-lg icon-shape card-total-icon shadow-info text-center border-radius-xl mt-n4 position-absolute d-flex justify-content-center align-items-center">
+                <img src="/assets/dash/img/icons-gif/totalbruto.gif" alt="Carteira">
+              </div>
+              <div class="text-end pt-1">
+                <!-- Titulo -->
+                <p class="text-md font-weight-bold mb-0 text-capitalize">Caixa</p>
+                <!-- Valor -->
+                <h4 class="mb-0 number-total fs-4">0.00</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card Caixa End -->
+      </div>
+      <!-- Rows Cards End -->
+
+
+      <!-- Card de Resultados Mensais -->
+      <div class="row mt-4 d-flex justify-content-center">
+        <div class="col-lg-12 col-md-12 mt-4 mb-4">
+          <div class="card z-index-2  ">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+              <div class="bg-gradient-dark shadow-dark border-radius-lg py-3 pe-1">
+                <!-- table -->
+                <div>
+                  <canvas id="myChart"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <h6 class="mb-0 "> Resultados Mensais </h6>
+              <p class="text-sm ">Dados baseados nos resultados mensais finais do caixa.</p>
+              <hr class="dark horizontal">
+              <div class="d-flex gap-1">
+                <img src="/assets/dash/img/icons/calendar.svg" alt="Calendário" style="width: 20px;">
+                <p class="mb-0 text-sm"> Resultados pós viradas mensais. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card de Resultados Mensais End -->
+
+      <!-- Tabela de Registros -->
+      <div class="row mb-4">
+        <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
+          <div class="card">
+            <div class="card-header pb-0">
+              <div class="row">
+                <div class="col-lg-6 col-7">
+                  <h5>Registros</h5>
+                  <p class="text-sm mb-0">
+                    <i class="fa fa-check text-info" aria-hidden="true"></i>
+                    <span class="font-weight-bold ms-1">6 últimos</span> registros feitos.
+                  </p>
+                </div>
+                <div class="col-lg-6 col-5 my-auto text-end">
+                  <div class="dropdown float-lg-end pe-4">
+                    <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa fa-ellipsis-v text-secondary"></i>
+                    </a>
+                    <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
+                      <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
+                      <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
+                      <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Tables -->
+            <a class="m-0 nav-link" href="/tables">
+              <div class="card-body px-0 pb-2">
+                <div class="table-responsive">
+                  <table class="table align-items-center mb-0">
+                    <thead>
+                      <tr>
+                        <th class="text-uppercase text-secondary text-dark font-weight-bolder opacity-10 text-sm">Titulo
+                        </th>
+                        <th class="text-uppercase text-center text-dark text-sm font-weight-bolder opacity-10 ps-2">Data
+                        </th>
+                        <th
+                          class="text-uppercase text-center text-secondary text-dark text-sm font-weight-bolder opacity-10 ps-2">
+                          Valor</th>
+                        <th
+                          class="text-center text-uppercase text-secondary text-dark text-sm font-weight-bolder opacity-10">
+                          Histórico
+                        </th>
+                        <th
+                          class="text-center text-uppercase text-secondary text-dark text-sm font-weight-bolder opacity-10">
+                          Status
+                        </th>
+                    </thead>
+                    <tbody>
+                      <!-- Card das receitas de modelo -->
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div>
+                              <img src="/assets/dash/img/Receita.jpg" class="avatar avatar-sm me-3 border-radius-lg"
+                                alt="user1">
+                            </div>
+                            <!-- Titulo -->
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Lucro de 30%</h6>
+                              <p class="text-xs text-secondary mb-0">Operacional</p>
+                            </div>
+                          </div>
+                        </td>
+                        <!-- Data -->
+                        <td class="text-center">
+                          <span class="text-secondary text-xs font-weight-bold">09/10/2023</span>
+                        </td>
+                        <!-- Valor -->
+                        <td class="align-middle text-sm text-center">
+                          <span class="text-secondary text-center text-xs font-weight-bold">R$408,54</span>
+                        </td>
+                        <!-- Descrição -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Lucro obtido encima das ações...
+                          </span>
+                        </td>
+                        <!-- Status -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Efetuado
+                          </span>
+                        </td>
+                      <!-- Card das despesas de modelo -->
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div>
+                              <img src="/assets/dash/img/Despesa.jpg" class="avatar avatar-sm me-3 border-radius-lg"
+                                alt="user1">
+                            </div>
+                            <!-- Titulo -->
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Pagamento</h6>
+                              <p class="text-xs text-secondary mb-0">Não Operacional</p>
+                            </div>
+                          </div>
+                        </td>
+                        <!-- Data -->
+                        <td class="text-center">
+                          <span class="text-secondary text-xs font-weight-bold">10/10/2023</span>
+                        </td>
+                        <!-- Valor -->
+                        <td class="align-middle text-sm text-center">
+                          <span class="text-secondary text-center text-xs font-weight-bold">R$350,00</span>
+                        </td>
+                        <!-- Descrição -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Pagamento da funcionária...
+                          </span>
+                        </td>
+                        <!-- Status -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Pendente
+                          </span>
+                        </td>
+                      <!-- Registro 1 -->
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div>
+                              <img src="/assets/dash/img/Despesa.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
+                            </div>
+                            <!-- Titulo -->
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Pagamento</h6>
+                              <p class="text-xs text-secondary mb-0">Não Operacional</p>
+                            </div>
+                          </div>
+                        </td>
+                        <!-- Data -->
+                        <td class="text-center">
+                          <span class="text-secondary text-xs font-weight-bold">10/10/2023</span>
+                        </td>
+                        <!-- Valor -->
+                        <td class="align-middle text-sm text-center">
+                          <span class="text-secondary text-center text-xs font-weight-bold">R$350,00</span>
+                        </td>
+                        <!-- Descrição -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Pagamento da funcionária...
+                          </span>
+                        </td>
+                        <!-- Status -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Pendente
+                          </span>
+                        </td>
+
+                      <!-- Registro 2 -->
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div>
+                              <img src="/assets/dash/img/Despesa.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
+                            </div>
+                            <!-- Titulo -->
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Pagamento</h6>
+                              <p class="text-xs text-secondary mb-0">Não Operacional</p>
+                            </div>
+                          </div>
+                        </td>
+                        <!-- Data -->
+                        <td class="text-center">
+                          <span class="text-secondary text-xs font-weight-bold">11/10/2023</span>
+                        </td>
+                        <!-- Valor -->
+                        <td class="align-middle text-sm text-center">
+                          <span class="text-secondary text-center text-xs font-weight-bold">R$450,00</span>
+                        </td>
+                        <!-- Descrição -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Pagamento de fornecedor...
+                          </span>
+                        </td>
+                        <!-- Status -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Pendente
+                          </span>
+                        </td>
+                      </tr>
+
+                      <!-- Card das receitas de modelo -->
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div>
+                              <img src="/assets/dash/img/Receita.jpg" class="avatar avatar-sm me-3 border-radius-lg"
+                                alt="user1">
+                            </div>
+                            <!-- Titulo -->
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Lucro de 30%</h6>
+                              <p class="text-xs text-secondary mb-0">Operacional</p>
+                            </div>
+                          </div>
+                        </td>
+                        <!-- Data -->
+                        <td class="text-center">
+                          <span class="text-secondary text-xs font-weight-bold">09/10/2023</span>
+                        </td>
+                        <!-- Valor -->
+                        <td class="align-middle text-sm text-center">
+                          <span class="text-secondary text-center text-xs font-weight-bold">R$408,54</span>
+                        </td>
+                        <!-- Descrição -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Lucro obtido encima das ações...
+                          </span>
+                        </td>
+                        <!-- Status -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Efetuado
+                          </span>
+                        </td>
+                      </tr>
+                      <!-- Card das receitas de modelo -->
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div>
+                              <img src="/assets/dash/img/Receita.jpg" class="avatar avatar-sm me-3 border-radius-lg"
+                                alt="user1">
+                            </div>
+                            <!-- Titulo -->
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Lucro de 30%</h6>
+                              <p class="text-xs text-secondary mb-0">Operacional</p>
+                            </div>
+                          </div>
+                        </td>
+                        <!-- Data -->
+                        <td class="text-center">
+                          <span class="text-secondary text-xs font-weight-bold">09/10/2023</span>
+                        </td>
+                        <!-- Valor -->
+                        <td class="align-middle text-sm text-center">
+                          <span class="text-secondary text-center text-xs font-weight-bold">R$408,54</span>
+                        </td>
+                        <!-- Descrição -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Lucro obtido encima das ações...
+                          </span>
+                        </td>
+                        <!-- Status -->
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs font-weight-bold">
+                            Efetuado
+                          </span>
+                        </td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </a>
+            <!-- End Tables -->
+          </div>
+        </div>
+
+        <!-- Notas Fiscais -->
+        <div class="col-lg-4 col-md-6">
+          <a class="m-0 nav-link" href="/billing">
+            <div class="card h-100">
+              <div class="card-header pb-0">
+                <h5>Notas Fiscais</h5>
+                <p class="text-sm">
+                  <img src="/assets/dash/img/icons/notas-fiscais.svg" alt="Notas Fiscais" width="20px">
+                  <span class="font-weight-bold">6 últimas</span> notas registradas.
+                </p>
+              </div>
+              <div class="card-body p-3 mt-2">
+                <!-- Conteúdo nota fiscal -->
+                <div>
+                  <div class="list-group">
+                    <div class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                      <div class="d-flex flex-column">
+                        <h6 class="mb-1 text-dark font-weight-bold text-sm">183744081</h6>
+                        <span class="text-xs">Receitas</span>
+                      </div>
+                      <div class="d-flex align-items-center text-sm">
+                        $<span>13,65</span>
+                      </div>
+                    </div>   
+                  </div>
+                  <div class="list-group">
+                    <div class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                      <div class="d-flex flex-column">
+                        <h6 class="mb-1 text-dark font-weight-bold text-sm">183744081</h6>
+                        <span class="text-xs">Receitas</span>
+                      </div>
+                      <div class="d-flex align-items-center text-sm">
+                        $<span>13,65</span>
+                      </div>
+                    </div>   
+                  </div>
+                  <div class="list-group">
+                    <div class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                      <div class="d-flex flex-column">
+                        <h6 class="mb-1 text-dark font-weight-bold text-sm">183744081</h6>
+                        <span class="text-xs">Receitas</span>
+                      </div>
+                      <div class="d-flex align-items-center text-sm">
+                        $<span>13,65</span>
+                      </div>
+                    </div>   
+                  </div>
+                  <div class="list-group">
+                    <div class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                      <div class="d-flex flex-column">
+                        <h6 class="mb-1 text-dark font-weight-bold text-sm">183744081</h6>
+                        <span class="text-xs">Receitas</span>
+                      </div>
+                      <div class="d-flex align-items-center text-sm">
+                        $<span>13,65</span>
+                      </div>
+                    </div>   
+                  </div>
+                  <div class="list-group">
+                    <div class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                      <div class="d-flex flex-column">
+                        <h6 class="mb-1 text-dark font-weight-bold text-sm">183744081</h6>
+                        <span class="text-xs">Receitas</span>
+                      </div>
+                      <div class="d-flex align-items-center text-sm">
+                        $<span>13,65</span>
+                      </div>
+                    </div>   
+                  </div>
+                  <div class="list-group">
+                    <div class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                      <div class="d-flex flex-column">
+                        <h6 class="mb-1 text-dark font-weight-bold text-sm">183744081</h6>
+                        <span class="text-xs">Receitas</span>
+                      </div>
+                      <div class="d-flex align-items-center text-sm">
+                        $<span>13,65</span>
+                      </div>
+                    </div>   
+                  </div>
+                  <!-- Fim conteúdo nota fiscal -->
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      
+        <!-- Notas Fiscais End -->
+      </div>
+      <!-- Tabela de Registros End-->
+    </div>
+    <!-- Content End -->
+  </main>
+  <!-- Main End -->
+
+  <div class="fixed-plugin">
+    <!-- Botão fixo na página para adição de Entrada e Saída -->
+    <div id="button-container">
+
+      <!-- Botão de Saída -->
+      <button type="button" class="btn btn-primary button" id="despesas" data-bs-toggle="modal"
+        data-bs-target="#exampleModal" data-bs-whatever="Despesa">
+        <img src="/assets/dash/img/despesa.svg" alt="Despesa" style="width: 35px;">
+      </button>
+
+      <!-- Modal de Saída -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content bg-despesa">
+            <form action="" method="post" id="formSaidasModal">
+              <div class="modal-header border-0">
+                <h1 class="modal-title fs-5 green-text" id="exampleModalLabel2">Saída</h1>
+                <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column align-items-center">
+                <div class="row w-100 p-0 d-flex justify-content-center">
+                  <div class="row w-100 p-2">
+                    <div class="col-md-7">
+                      <div class="row w-100 ps-0 m-0">
+                        <div class="col-md-6 p-0 ps-1 pe-1">
+                          <div class="input-group input-group-outline w-100">
+                            <label class="form-label">Título</label>
+                            <input type="text" name="tituloSaida" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-md-6 ps-1 pe-1">
+                          <select name="categoriaSaida" class="p-2 bg-transparent border-radius-md w-100" required>
+                            <option value="" selected>Categoria</option>
+                            <option value="Operacional">Operacional</option>
+                            <option value="Não Operacional">Não Operacional</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row w-100 m-0">
+                        <div class="col-md-6 px-1">
+                          <div class="input-group input-group-outline my-3 w-100">
+                            <label class="form-label">Valor</label>
+                            <input type="text" name="valorSaida" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-md-6 px-1">
+                          <select name="qtdParcelaSaida" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                            <option value="0" selected>Qtd. Parcela</option>
+                            <option value="1">1 Parcela</option>
+                            <option value="2">2 Parcela</option>
+                            <option value="3">3 Parcela</option>
+                            <option value="4">4 Parcela</option>
+                        </select>
+                        </div>
+                      </div>
+                      <div class="px-1">
+                        <select name="destinatarioSaida" class="p-2 bg-transparent border-radius-md w-100 my-0" required>
+                          <option value="S/D" selected>Destinatário</option>
+                          <option value="Banco da Amazônia S.A.">Banco da Amazônia S.A.</option>
+                          <option value="Banco do Brasil S.A.">Banco do Brasil S.A.</option>
+                          <option value="Banco de Brasília S.A.">Banco de Brasília S.A.</option>
+                          <option value="Banco do Nordeste do Brasil S.A.">Banco do Nordeste do Brasil S.A.</option>
+                          <option value="Banestes S.A.">Banestes S.A.</option>
+                          <option value="Banrisul S.A">Banrisul S.A</option>
+                          <option value="Banco Bradesco S.A.">Banco Bradesco S.A.</option>
+                          <option value="Caixa Econômica Federal">Caixa Econômica Federal</option>
+                          <option value="Citi S.A">Citi S.A</option>
+                          <option value="Hsbc S/A">Hsbc S/A</option>
+                          <option value="Inter S.A">Inter S.A</option>
+                          <option value="Itau S.A">Itau S.A</option>
+                          <option value="Nu Financeira S.A.">Nu Financeira S.A.</option>
+                          <option value="Banco Original S.A.">Banco Original S.A.</option>
+                          <option value="Banco Safra S.A.">Banco Safra S.A.</option>
+                          <option value="Banco Santander S.A">Banco Santander S.A</option>
+                          <option value="Banco Sicoob S.A.">Banco Sicoob S.A.</option>
+                          <option value="Banco Sicredi S.A.">Banco Sicredi S.A.</option>
+                          <option value="Desconhecido">Desconhecido</option>
+                          <option value="S/D">Sem Destinatário</option>
+                      </select>
+                      </div>
+                      <div class="px-1">
+                        <select name="fornecedorSaida" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                          <option value="S/F" selected>Fornecedor</option>
+                          <option value="Coca-Cola Brasil">Coca-Cola Brasil</option>
+                          <option value="S/F">Sem Fornecedor</option>
+                      </select>
+                      </div>
+                      <div class="row w-100 m-0">
+                        <div class="col-md-6 px-1">
+                          <div class="input-group input-group-outline my-0 w-100 px-0">
+                            <div class="input-group">
+                              <button class="btn btn-outline-secondary dropdown-toggle p-2 m-0" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" id="Sim">Com Nota Fiscal</a></li>
+                                <li><a class="dropdown-item" id="Nao">Sem Nota Fiscal</a></li>
+                              </ul>
+                              <input type="text" class="form-control m-0" aria-label="Text input with dropdown button" name="notaFiscalSaida" placeholder="Nota Fiscal" required>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6 px-1">
+                        <select name="statusSaida" class="p-2 bg-transparent border-radius-md w-100 px-2" required>
+                          <option value="" selected>Status</option>
+                          <option value="Pendente">Pendente</option> 
+                          <option value="Efetuado">Efetuado</option>
+                        </select>
+                      </div>
+                      </div>
+                      <div class="row w-100 m-0">
+                        <div class="col-md-6 px-1">
+                          <select name="pagamentoSaida" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                            <option value="" selected>Pagamento</option>
+                            <option value="Boleto">Boleto</option>
+                            <option value="Pix">PIX</option>
+                            <option value="Crédito">Crédito</option>
+                            <option value="Débito">Débito</option>
+                            <option value="Dinheiro">Dinheiro</option>
+                        </select>
+                        </div>
+                        <div class="col-md-6 px-1">
+                          <div class="input-group input-group-outline my-3 w-100">
+                            <input type="date" class="form-control" name="dataSaida">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="row w-100 h-100 pb-3 m-0">
+                        <textarea class="border border-secondary border-radius-lg w-100 h-100" name="historicoSaida" id="escreverHistoricoSaida" cols="30" rows="10" placeholder="Histórico"></textarea>
+                      </div>
+                      <div class="row w-100 h-100 pb-3 m-0 d-none">
+                        <select name="tipoSaida">
+                          <option value="Saída" selected>Saída</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <button type="button" onclick="limparFormulario()" class="btn btn-light">Limpar</button>
+                <button type="submit" class="btn btn-dark">Registrar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botão de Entrada -->
+      <button type="button" class="btn btn-primary button" id="receitas" data-bs-toggle="modal"
+        data-bs-target="#exampleModal2" data-bs-whatever="Receita">
+        <img src="/assets/dash/img/receita.svg" alt="Receita" style="width: 35px;">
+      </button>
+
+      <!-- Modal de Entrada -->
+      <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content bg-receita">
+            <form action="" method="post" id="formEntradasModal">
+              <div class="modal-header border-0">
+                <h1 class="modal-title fs-5 green-text" id="exampleModalLabel2">Entrada</h1>
+                <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column align-items-center">
+                <div class="row w-100 p-0 d-flex justify-content-center">
+                  <div class="row w-100 p-2">
+                    <div class="col-md-7">
+                      <div class="row w-100 ps-0 m-0">
+                        <div class="col-md-6 p-0 ps-1 pe-1">
+                          <div class="input-group input-group-outline w-100">
+                            <label class="form-label">Título</label>
+                            <input type="text" name="tituloEntrada" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-md-6 ps-1 pe-1">
+                          <select name="categoriaEntrada" class="p-2 bg-transparent border-radius-md w-100" required>
+                            <option value="" selected>Categoria</option>
+                            <option value="Operacional">Operacional</option>
+                            <option value="Não Operacional">Não Operacional</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row w-100 m-0">
+                        <div class="col-md-6 px-1">
+                          <div class="input-group input-group-outline my-3 w-100">
+                            <label class="form-label">Valor</label>
+                            <input type="text" name="valorEntrada" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-md-6 px-1">
+                          <select name="qtdParcelaEntrada" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                            <option value="0" selected>Qtd. Parcela</option>
+                            <option value="1">1 Parcela</option>
+                            <option value="2">2 Parcela</option>
+                            <option value="3">3 Parcela</option>
+                            <option value="4">4 Parcela</option>
+                        </select>
+                        </div>
+                      </div>
+                      <div class="px-1">
+                        <select name="destinatarioEntrada" class="p-2 bg-transparent border-radius-md w-100 my-0" required>
+                          <option value="S/D" selected>Destinatário</option>
+                          <option value="Banco da Amazônia S.A.">Banco da Amazônia S.A.</option>
+                          <option value="Banco do Brasil S.A.">Banco do Brasil S.A.</option>
+                          <option value="Banco de Brasília S.A.">Banco de Brasília S.A.</option>
+                          <option value="Banco do Nordeste do Brasil S.A.">Banco do Nordeste do Brasil S.A.</option>
+                          <option value="Banestes S.A.">Banestes S.A.</option>
+                          <option value="Banrisul S.A">Banrisul S.A</option>
+                          <option value="Banco Bradesco S.A.">Banco Bradesco S.A.</option>
+                          <option value="Caixa Econômica Federal">Caixa Econômica Federal</option>
+                          <option value="Citi S.A">Citi S.A</option>
+                          <option value="Hsbc S/A">Hsbc S/A</option>
+                          <option value="Inter S.A">Inter S.A</option>
+                          <option value="Itau S.A">Itau S.A</option>
+                          <option value="Nu Financeira S.A.">Nu Financeira S.A.</option>
+                          <option value="Banco Original S.A.">Banco Original S.A.</option>
+                          <option value="Banco Safra S.A.">Banco Safra S.A.</option>
+                          <option value="Banco Santander S.A">Banco Santander S.A</option>
+                          <option value="Banco Sicoob S.A.">Banco Sicoob S.A.</option>
+                          <option value="Banco Sicredi S.A.">Banco Sicredi S.A.</option>
+                          <option value="Desconhecido">Desconhecido</option>
+                          <option value="S/D">Sem Destinatário</option>
+                      </select>
+                      </div>
+                      <div class="px-1">
+                        <select name="fornecedorEntrada" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                          <option value="S/F" selected>Fornecedor</option>
+                          <option value="Coca-Cola Brasil">Coca-Cola Brasil</option>
+                          <option value="S/F">Sem Fornecedor</option>
+                      </select>
+                      </div>
+                      <div class="row w-100 m-0">
+                        <div class="col-md-6 px-1">
+                          <div class="input-group input-group-outline my-0 w-100 px-0">
+                            <div class="input-group">
+                              <button class="btn btn-outline-secondary dropdown-toggle p-2 m-0" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" id="Sim">Com Nota Fiscal</a></li>
+                                <li><a class="dropdown-item" id="Nao">Sem Nota Fiscal</a></li>
+                              </ul>
+                              <input type="text" class="form-control m-0" aria-label="Text input with dropdown button" name="notaFiscalEntrada" placeholder="Nota Fiscal" required>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6 px-1">
+                        <select name="statusEntrada" class="p-2 bg-transparent border-radius-md w-100 px-2" required>
+                          <option value="" selected>Status</option>
+                          <option value="Pendente">Pendente</option> 
+                          <option value="Efetuado">Efetuado</option>
+                        </select>
+                      </div>
+                      </div>
+                      <div class="row w-100 m-0">
+                        <div class="col-md-6 px-1">
+                          <select name="pagamentoEntrada" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                            <option value="" selected>Pagamento</option>
+                            <option value="Boleto">Boleto</option>
+                            <option value="Pix">Pix</option>
+                            <option value="Crédito">Crédito</option>
+                            <option value="Débito">Débito</option>
+                            <option value="Dinheiro">Dinheiro</option>
+                        </select>
+                        </div>
+                        <div class="col-md-6 px-1">
+                          <div class="input-group input-group-outline my-3 w-100">
+                            <input type="date" class="form-control" name="dataEntrada">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="row w-100 h-100 pb-3 m-0">
+                        <textarea class="border border-secondary border-radius-lg w-100 h-100" name="historicoEntrada" id="escreverHistoricoEntrada" cols="30" rows="10" placeholder="Histórico"></textarea>
+                      </div>
+                      <div class="row w-100 h-100 pb-3 m-0 d-none">
+                        <select name="tipoEntrada">
+                          <option value="Entrada" selected>Entrada</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <button type="button" onclick="limparFormulario()" class="btn btn-light">Limpar</button>
+                <button type="submit" class="btn btn-dark">Registrar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botão Principal -->
+      <button class="button" id="money">
+        <img class="money" src="/assets/dash/img/coins.svg" alt="Money" style="width: 30px;">
+      </button>
+    </div>
+    <!-- Final do Botão fixo na página para adição de Entrada e Saída -->
+
+
+    <!-- Modal Card de Entrada -->
+    <div class="modal fade" id="modalEntradaCard" tabindex="-1" aria-labelledby="modalEntradaCard2" aria-hidden="true">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content" style="background-image: linear-gradient(126deg, #49f54ff5, #000000f0 94%);">
+          <div class="modal-header bg-border-black">
+            <h1 class="modal-title fs-5 green-text" id="exampleModalLabel2">Receitas Registradas</h1>
+            <button type="button" class="btn-close btn-danger shadow-success" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body d-flex flex-column align-items-center overflow-y-auto" style="max-height: 20em;">
+            <!-- Conteúdo das listas de entrada -->
+            <div class="d-flex align-items-center gap-4 border border-seccondary p-2 w-100 justify-content-between border-radius-md">
+              <!-- Titulo -->
+              <div class="d-flex flex-column justify-content-center">
+                <h6 class="mb-0 text-sm">Reembolso de Fornecedor</h6>
+                <p class="text-xs text-dark mb-0">Operacional</p>
+              </div>
+              <!-- Data -->
+              <div class="align-middle text-center">
+                <span class="text-success text-xs font-weight-bold">16/10/2023</span>
+              </div>
+              <!-- Valor -->
+              <div class="align-middle text-center">
+                <span class="text-success text-center text-xs font-weight-bold">R$<span class="value-table-receita">13,65</span></span>
+              </div>
+            </div>
+
+            <!-- Conteúdo das listas de entrada -->
+            <div class="d-flex align-items-center gap-4 border border-seccondary p-2 w-100 justify-content-between border-radius-md">
+              <!-- Titulo -->
+              <div class="d-flex flex-column justify-content-center">
+                <h6 class="mb-0 text-sm text-dark">Reembolso de Fornecedor</h6>
+                <p class="text-xs text-dark mb-0">Operacional</p>
+              </div>
+              <!-- Data -->
+              <div class="align-middle text-center">
+                <span class="text-success text-xs font-weight-bold">16/10/2023</span>
+              </div>
+              <!-- Valor -->
+              <div class="align-middle text-center">
+                <span class="text-success text-center text-xs font-weight-bold">R$<span class="value-table-receita">13,65</span></span>
+              </div>
+            </div>
+
+            <!-- Fim Conteúdo das listas de entrada -->
+          </div>
+          <div class="modal-footer bg-border-black">
+            <!-- Calculo da soma dos valores de entrada -->
+              <div class="bg-gradient-success shadow-success border-radius-lg d-flex justify-content-between pt-3 pb-2 w-100">
+                <h6 class="text-white text-capitalize ps-3">Entradas</h6>
+                <h6 class="m-0 me-4 text-white">R$<span class="font-weight-bold"> 27.30</span></h6>
+              </div>
+            <!-- Fim Calculo da soma dos valores de entrada -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal Card de Saida -->
+    <div class="modal fade" id="modalSaidaCard" tabindex="-1" aria-labelledby="modalSaidaCard2" aria-hidden="true">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content" style="background-image: linear-gradient(126deg, #ff665cf5, #000000f0 94%);">
+          <div class="modal-header bg-border-black">
+            <h1 class="modal-title fs-5 green-text" id="exampleModalLabel2">Saídas Registradas</h1>
+            <button type="button" class="btn-close btn-danger shadow-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body d-flex flex-column align-items-center overflow-y-auto" style="max-height: 20em;">
+            <!-- Conteúdo das listas de saída -->
+            <div class="d-flex align-items-center gap-4 border border-seccondary p-2 w-100 justify-content-between border-radius-md">
+              <!-- Titulo -->
+              <div class="d-flex flex-column justify-content-center">
+                <h6 class="mb-0 text-sm">Produtos de Limpeza</h6>
+                <p class="text-xs text-dark mb-0">Não Operacional</p>
+              </div>
+              <!-- Data -->
+              <div class="align-middle text-center">
+                <span class="text-danger text-xs font-weight-bold">18/10/2023</span>
+              </div>
+              <!-- Valor -->
+              <div class="align-middle text-center">
+                <span class="text-danger text-center text-xs font-weight-bold">R$<span class="value-table-receita">13,65</span></span>
+              </div>
+            </div>
+
+            <!-- Conteúdo das listas de saída -->
+            <div class="d-flex align-items-center gap-4 border border-seccondary p-2 w-100 justify-content-between border-radius-md">
+              <!-- Titulo -->
+              <div class="d-flex flex-column justify-content-center">
+                <h6 class="mb-0 text-sm">Produtos de Limpeza</h6>
+                <p class="text-xs text-dark mb-0">Não Operacional</p>
+              </div>
+              <!-- Data -->
+              <div class="align-middle text-center">
+                <span class="text-danger text-xs font-weight-bold">18/10/2023</span>
+              </div>
+              <!-- Valor -->
+              <div class="align-middle text-center">
+                <span class="text-danger text-center text-xs font-weight-bold">R$<span class="value-table-receita">13,65</span></span>
+              </div>
+            </div>
+
+
+            <!-- Fim Conteúdo das listas de saída -->
+          </div>
+          <div class="modal-footer bg-border-black">
+            <!-- Calculo da soma dos valores de saída -->
+              <div class="bg-gradient-danger shadow-danger border-radius-lg d-flex justify-content-between pt-3 pb-2 w-100">
+                <h6 class="text-white text-capitalize ps-3">Saídas</h6>
+                <h6 class="m-0 me-4 text-white">R$<span class="font-weight-bold"> 27.30</span></h6>
+              </div>
+            <!-- Fim Calculo da soma dos valores de saída -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- Navbar Lateral de Configurações -->
+    <div class="card shadow-lg">
+      <div class="card-header pb-0 pt-3">
+        <div class="float-start d-flex justify-content-center mt-3">
+          <img class="w-100 img-fluid" src="/assets/dash/img/logos/logo3.png" alt="Logo Planbase">
+        </div>
+        <div class="float-end">
+          <button class="btn btn-link text-dark p-0 fixed-plugin-close-button">
+            <i class="material-icons">clear</i>
+          </button>
+        </div>
+        <!-- End Toggle Button -->
+      </div>
+      <hr class="horizontal dark my-1">
+      <div class="card-body pt-sm-3 pt-0">
+        <!-- Sidebar Backgrounds -->
+        <div>
+          <h6 class="mb-0">Temas para Escolha</h6>
+        </div>
+        <a href="javascript:void(0)" class="switch-trigger background-color">
+          <div class="badge-colors my-2 text-start">
+            <span class="badge filter bg-gradient-primary active" data-color="primary"
+              onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-dark" data-color="dark" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-info" data-color="info" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-success" data-color="success" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-warning" data-color="warning" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-danger" data-color="danger" onclick="sidebarColor(this)"></span>
+          </div>
+        </a>
+        <!-- Temas -->
+        <div class="mt-3">
+          <h6 class="mb-0">Temas</h6>
+          <p class="text-sm">Escolha essas opções para sua comodidade.</p>
+        </div>
+        <div class="d-flex">
+          <button class="btn bg-gradient-dark px-3 mb-2 active" data-class="bg-gradient-dark"
+            onclick="sidebarType(this)">Dark</button>
+          <button class="btn bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-transparent"
+            onclick="sidebarType(this)">Transparente</button>
+          <button class="btn bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-white"
+            onclick="sidebarType(this)">Branco</button>
+        </div>
+        <!-- Navbar Fixed -->
+        <hr class="horizontal dark my-3">
+        <div class="mt-2 d-flex">
+          <h6 class="mb-0">Claro / Escuro</h6>
+          <div class="form-check form-switch ps-0 ms-auto my-auto">
+            <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Navbar Lateral de Configurações Final -->
+
+    <!--   Core JS Files   -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/assets/dash/js/core/popper.min.js"></script>
+    <script src="/assets/dash/js/core/bootstrap.min.js"></script>
+    <script src="/assets/dash/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="/assets/dash/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="/assets/dash/js/pages/index/index.js"></script>
+    <script src="/assets/dash/js/pages/modal.js"></script>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <!-- Conexão com o Back-end via Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Insere dos dados do modal de entrada e saída no banco -->
+    <script src="/assets/dash/js/connection/modalEntrada.js"></script>
+    <script src="/assets/dash/js/connection/modalSaida.js"></script>
+    <!-- Resgatar do banco valores dos cards de registros, entrada e saída -->
+    <script src="/assets/dash/js/connection/index/cardEntradaPreco.js"></script>
+    <script src="/assets/dash/js/connection/index/cardSaidaPreco.js"></script>
+    <script src="/assets/dash/js/connection/index/cardRegistroNumbers.js"></script>
+    <!-- Resgatar do banco os 6 primeiros valores da tabela de registro, e para nota fiscal -->
+    <script src="/assets/dash/js/connection/index/registrosSeis.js"></script>
+    <script src="/assets/dash/js/connection/index/notaFiscalSeis.js"></script>
+    
+    <script>
+      var win = navigator.platform.indexOf('Win') > -1;
+      if (win && document.querySelector('#sidenav-scrollbar')) {
+        var options = {
+          damping: '0.5'
+        }
+        Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+      }
+    </script>
+    <script src="/assets/dash/js/material-dashboard.min.js"></script>
+</body>
+
+</html>

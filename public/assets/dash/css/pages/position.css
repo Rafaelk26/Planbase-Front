@@ -1,0 +1,125 @@
+.button {
+    position: fixed;
+    z-index: 3;
+    top: 80%;
+    left: 95%;
+    translate: -50% 50%;
+    background: #F4F7F5;
+    border: none;
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in;
+    }
+    
+    #money {
+    color: #000;
+    background: #F56839;
+    }
+    
+    #receitas {
+    background: linear-gradient(-160deg, #007628, #6DB753);
+    }
+    
+    #despesas {
+    background: linear-gradient(135deg, #FF0F00, #E7918B);
+    }
+    
+    #button-container:hover > #receitas {
+    translate: -166% 30%;
+    }
+    
+    #button-container:hover > #despesas {
+    translate: -87.78% -60.78%;
+    }
+    
+    #button-container:hover > #receitas:hover {
+    width: 70px;
+    height: 70px;
+    border: 3px solid rgb(6, 54, 14);
+    cursor: pointer;
+    }
+    
+    #button-container:hover > #despesas:hover {
+    width: 70px;
+    height: 70px;
+    border: 3px solid red;
+    cursor: pointer;
+    }
+    
+    #button-container .despesa{
+    width: 45px;
+    }
+    
+    #button-container .receita{
+    width: 45px;
+    }
+    
+    #button-container .money{
+    width: 29px;
+    }
+
+
+@media screen and (min-width: 1900px) {
+    .button {
+        position: absolute;
+        z-index: 3;
+        top: 83%;
+        left: 96%;
+        translate: -50% 50%;
+        background: #F4F7F5;
+        border: none;
+        border-radius: 50%;
+        height: 65px;
+        width: 65px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s ease-in;
+        }
+}
+
+@media screen and (max-width: 900px) {
+    .button {
+        position: absolute;
+        z-index: 3;
+        top: 80%;
+        left: 92%;
+        translate: -50% 50%;
+        background: #F4F7F5;
+        border: none;
+        border-radius: 50%;
+        height: 65px;
+        width: 65px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s ease-in;
+        }
+}
+
+@media screen and (max-width: 720px) {
+    .button {
+        position: absolute;
+        z-index: 3;
+        top: 80%;
+        left: 90%;
+        translate: -50% 50%;
+        background: #F4F7F5;
+        border: none;
+        border-radius: 50%;
+        height: 65px;
+        width: 65px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s ease-in;
+        }
+}

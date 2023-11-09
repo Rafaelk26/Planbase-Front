@@ -1,0 +1,54 @@
+
+.card-register{
+  background-image: linear-gradient(119deg, #b36f0a, #f1b200);
+  color: black;
+}
+
+.card-register-icon{
+  background-color: #ff9800;
+}
+
+.number-register{
+  color: #000;
+}
+
+
+.card-invoice{
+  background-image: linear-gradient(132deg, red, #ff9595);
+  color: black;
+}
+
+.card-invoice-icon{
+  background-color: #ff0000;
+}
+
+.number-invoice{
+  color: #000;
+}
+
+.card-entrance{
+  background-image: linear-gradient(137deg, #188321, #67d330);
+  color: black;
+}
+
+.card-entrance-icon{
+  background-color: #0aa217;
+}
+
+.number-entrance{
+  color: #000;
+}
+
+
+.card-total{
+  background-image: linear-gradient(142deg, #2663b4, #99d9ff);
+  color: black;
+}
+
+.card-total-icon{
+  background-color: #0558c5;
+}
+
+.number-total{
+  color: #000;
+}

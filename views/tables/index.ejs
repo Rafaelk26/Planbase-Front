@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="planbase" sizes="100x100" href="/assets/dash/img/logos/logo-planbase100x100.svg">
+  <link rel="icon" type="image/png" href="/assets/dash/img/logos/logo-planbase100x100.svg">
+  <title>
+    PlanBase - Registros
+  </title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Nucleo Icons -->
+  <link href="/assets/dash/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="/assets/dash/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- CSS Files -->
+  <link id="pagestyle" href="/assets/dash/css/material-dashboard.css?v=3.1.0" rel="stylesheet" />
+  <!-- Tables CSS -->
+  <link rel="stylesheet" href="/assets/dash/css/pages/tables.css">
+  <!-- CSS Position Component -->
+  <link rel="stylesheet" href="/assets/dash/css/pages/position.css">
+  <!-- CSS Modal Component -->
+  <link rel="stylesheet" href="/assets/dash/css/pages/modal.css">
+  <!-- Nepcha Analytics (nepcha.com) -->
+  <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
+  <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+</head>
+
+<body class="g-sidenav-show  bg-gray-200">
+<!-- Aside -->
+<aside
+class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark"
+id="sidenav-main">
+<div class="sidenav-header d-flex justify-content-center p-3">
+  <a class=" m-0 " href="/">
+    <img src="/assets/dash/img/logos/logo3.png" class="img-fluid" alt="main_logo" style="height: 50px; width: 12rem;">
+          </a>
+</div>
+<hr class="horizontal light mt-0 mb-2">
+<div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link text-white" href="/">
+        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+          <i class="material-icons opacity-10">dashboard</i>
+        </div>
+        <span class="nav-link-text ms-1">Dashboard</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white active bg-gradient-primary" href="/tables">
+        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+          <i class="material-icons opacity-10">table_view</i>
+        </div>
+        <span class="nav-link-text ms-1">Registros</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="/billing">
+        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+          <i class="material-icons opacity-10">receipt_long</i>
+        </div>
+        <span class="nav-link-text ms-1">Gestão</span>
+      </a>
+    </li>
+    <li class="nav-item mt-3">
+      <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Financeiro</h6>
+    </li>
+    <li class="nav-item">
+      <!-- /tables/entradas-->
+      <a class="nav-link text-white " href="/tables/entradas">
+        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+         <img src="/assets/dash/img/icons/entrada.svg" alt="Entrada">
+        </div>
+        <span class="nav-link-text ms-1">Entradas</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <!-- /tables/saidas -->
+      <a class="nav-link text-white " href="/tables/saidas">
+        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+          <img src="/assets/dash/img/icons/saída.svg" alt="Saída">
+        </div>
+        <span class="nav-link-text ms-1">Saídas</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <!-- /tables/caixa -->
+      <a class="nav-link text-white " href="/tables/caixa">
+        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+          <img src="/assets/dash/img/icons/caixa.svg" alt="Caixa">
+        </div>
+        <span class="nav-link-text ms-1">Caixa</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <!-- /tables/previsao -->
+      <a class="nav-link text-white " href="/tables/previsao">
+        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+          <img src="/assets/dash/img/icons/previsão.svg" alt="Previsão">
+        </div>
+        <span class="nav-link-text ms-1">Previsão</span>
+      </a>
+    </li>
+
+    <li class="nav-item mt-3">
+      <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Conta</h6>
+    </li>
+    <li class="nav-item">
+      <!-- /profile/:id -->
+      <a class="nav-link text-white " href="/profile">
+        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+          <i class="material-icons opacity-10">person</i>
+        </div>
+        <span class="nav-link-text ms-1">Profile</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <!-- /faq -->
+      <a class="nav-link text-white " href="/faq">
+        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+          <img src="/assets/dash/img/dúvida.svg" alt="Dúvidas">
+        </div>
+        <span class="nav-link-text ms-1">FAQ</span>
+      </a>
+    </li>
+  </ul>
+</div>
+    <!-- Footer -->
+    <footer class="footer py-2 d-flex flex-column justify-content-center">
+      <div class="copyright text-center text-sm text-muted text-lg-center">
+        Copyright © Planbase
+        <script>
+          document.write(new Date().getFullYear())
+        </script>
+      </div>
+      <!-- /devs -->
+      <a class="nav-link text-white d-flex justify-content-start" href="/devs">
+        <img class="ms-4" src="/assets/dash/img/icons/code.svg" alt="Code">
+        <span class="nav-link-text ms-2">Conheça os Devs!</span>
+      </a>
+    </footer>
+    <!-- Footer End -->
+</aside>
+<!-- Aside end -->
+
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <!-- Navbar -->
+        <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
+        data-scroll="true">
+        <div class="container-fluid py-1 px-3">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+              <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
+              <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
+            </ol>
+            <h6 class="font-weight-bolder mb-0">Dashboard</h6>
+          </nav>
+          <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+            <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+            </div>
+            <ul class="navbar-nav  justify-content-end">
+              <li class="nav-item d-flex align-items-center d-none">
+                <a href="/adm/login/" class="nav-link text-body font-weight-bold px-0">
+                  <span class="d-sm-inline d-none">Administrador</span>
+                </a>
+              </li>
+              <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+                <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                  <div class="sidenav-toggler-inner">
+                    <i class="sidenav-toggler-line"></i>
+                    <i class="sidenav-toggler-line"></i>
+                    <i class="sidenav-toggler-line"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item px-3 d-flex align-items-center">
+                <a href="javascript:;" class="nav-link text-body p-0">
+                  <lord-icon class="fixed-plugin-button-nav cursor-pointer" src="https://cdn.lordicon.com/dycatgju.json"
+                    trigger="hover" colors="primary:#7b809a" style="width:20px;height:20px">
+                  </lord-icon>
+                </a>
+              </li>
+              <li class="nav-item d-flex align-items-center">
+                <div class="dropdown">
+                  <a href="#" class="d-flex align-items-center text-white text-decoration-none" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="https://github.com/mdo.png" alt="hugenerd" width="40" height="40" class="rounded-circle">
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark text-small shadow dropdown-menu-end">
+                    <li><a class="dropdown-item" href="/profile">Perfil</a></li>
+                    <li>
+                      <h6 class="m-0 ms-3 mt-3 text-uppercase text-xs text-white font-weight-bolder opacity-8">Sair</h6>
+                    </li>
+                    <li><a class="dropdown-item" href="/login">Logout</a></li>
+                </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+    <div class="container-fluid py-4">
+      <div class="row">
+        <div class="col-12">
+          <div class="card my-4">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+              <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3 d-flex align-items-center">
+                <h6 class="text-white text-capitalize ps-3">Registros Feitos</h6>
+                <div class="group-data-search w-20 ms-auto me-3 d-flex align-items-center gap-3">
+                  <input type="date" name="dataSelecionada" id="dataSelecionada">
+                  <button type="button" class="btn bg-gradient-dark m-0 d-flex justify-content-center" id="acharData">
+                    <img src="/assets/dash/img/icons/search.svg" alt="Pesquisar">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card-body px-0 pb-2">
+              <div class="table-responsive p-0">
+                <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-secondary text-dark font-weight-bolder opacity-10 text-sm">Titulo
+                      </th>
+                      <th class="text-uppercase text-center text-dark text-sm font-weight-bolder opacity-10 ps-2">Data
+                      </th>
+                      <th
+                        class="text-uppercase text-center text-secondary text-dark text-sm font-weight-bolder opacity-10 ps-2">
+                        Valor
+                      </th>
+                      <th
+                        class="text-center text-uppercase text-secondary text-dark text-sm font-weight-bolder opacity-10">
+                        Histórico
+                      </th>
+                      <th
+                        class="text-center text-uppercase text-secondary text-dark text-sm font-weight-bolder opacity-10">
+                        Status
+                      </th>
+                      <th
+                        class="text-center text-uppercase text-secondary text-dark text-sm font-weight-bolder opacity-10">
+                        Fornecedor
+                      </th>
+                      <th
+                        class="text-center text-uppercase text-secondary text-dark text-sm font-weight-bolder opacity-10">
+                        Destinatário
+                      </th>
+                      <th
+                        class="text-center text-uppercase text-secondary text-dark text-sm font-weight-bolder opacity-10">
+                        Nota Fiscal
+                      </th>
+                      <th
+                        class="text-center text-uppercase text-secondary text-dark text-sm font-weight-bolder opacity-10">
+                        Pagamento
+                      </th>
+                      <th
+                          class="text-center text-uppercase text-secondary text-dark text-sm font-weight-bolder opacity-10">
+                          Qtd. Parcela
+                      </th>
+                      <th
+                          class="text-center text-uppercase text-secondary text-dark text-sm font-weight-bolder opacity-10">
+                          Editar
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Card das receitas de modelo -->
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="/assets/dash/img/Receita.jpg" class="avatar avatar-sm me-3 border-radius-lg"
+                              alt="user1">
+                          </div>
+                          <!-- Titulo -->
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Lucro de 30%</h6>
+                            <p class="text-xs text-secondary mb-0">Operacional</p>
+                          </div>
+                        </div>
+                      </td>
+                      <!-- Data -->
+                      <td class="text-center">
+                        <span class="text-secondary text-xs font-weight-bold">09/10/2023</span>
+                      </td>
+                      <!-- Valor -->
+                      <td class="align-middle text-sm text-center">
+                        <span class="text-secondary text-center text-xs font-weight-bold">R$408,54</span>
+                      </td>
+                      <!-- Histórico -->
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">
+                          Lucro obtido encima das ações...
+                        </span>
+                      </td>
+                      <!-- Status -->
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">
+                          Efetuado
+                        </span>
+                      </td>
+                      <!-- Fornecedor -->
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">
+                          Não
+                        </span>
+                      </td>
+                      <!-- Destinatário -->
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">
+                          Santander S.A
+                        </span>
+                      </td>
+                      <!-- Nota Fiscal -->
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">
+                          S/NF
+                        </span>
+                      </td>
+                      <!-- Pagamento -->
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">
+                          Cartão de Crédito
+                        </span>
+                      </td>
+                      <!-- Qtd. Parcela -->
+                      <td class="align-middle text-center">
+                        <div class="progress-wrapper w-50 d-flex align-items-center gap-2 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold">4/4</span>
+                            </div>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-success w-100" role="progressbar" aria-valuenow="100"
+                              aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle text-center">
+                        <button class="btn btn-primary editar-btn" data-bs-target="#modalEditar" data-bs-toggle="modal" data-id="">btn</button>
+                      </td>
+                    </tr>
+
+                    <!-- Card das despesas de modelo -->
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="/assets/dash/img/Despesa.jpg" class="avatar avatar-sm me-3 border-radius-lg"
+                              alt="user1">
+                          </div>
+                          <!-- Titulo -->
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Pagamento</h6>
+                            <p class="text-xs text-secondary mb-0">Não Operacional</p>
+                          </div>
+                        </div>
+                      </td>
+                      <!-- Data -->
+                      <td class="text-center">
+                        <span class="text-secondary text-xs font-weight-bold">10/10/2023</span>
+                      </td>
+                      <!-- Valor -->
+                      <td class="align-middle text-sm text-center">
+                        <span class="text-secondary text-center text-xs font-weight-bold">R$350,00</span>
+                      </td>
+                      <!-- Descrição -->
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">
+                          Pagamento da funcionária...
+                        </span>
+                      </td>
+                      <!-- Status -->
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">
+                          Pendente
+                        </span>
+                      </td>
+                      <!-- Fornecedor -->
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">
+                          Coca-Cola Brasil
+                        </span>
+                      </td>
+                      <!-- Destinatário -->
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">
+                          Santander S.A
+                        </span>
+                      </td>
+                      <!-- Nota Fiscal -->
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">
+                          S/NF
+                        </span>
+                      </td>
+                      <!-- Pagamento -->
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">
+                          Cartão de Crédito
+                        </span>
+                      </td>
+                      <!-- Qtd. Parcela -->
+                      <td class="align-middle text-center">
+                        <div class="progress-wrapper w-50 d-flex align-items-center gap-2 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold">4/4</span>
+                            </div>
+                          </div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-success w-100" role="progressbar" aria-valuenow="100"
+                              aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle text-center">
+                        <button class="btn btn-primary editar-btn" data-bs-target="#modalEditar" data-bs-toggle="modal" data-id="">btn</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Content End -->
+    </div>
+
+    <!-- Modal de Editar -->
+     <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="modalEditar2" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <form action="" method="put" id="formEditElementsinLine">
+            <div class="modal-header border-0">
+              <h1 class="modal-title fs-5" id="modalEditarTitle2">Editar</h1>
+              <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex flex-column align-items-center">
+              <div class="row w-100 p-0 d-flex justify-content-center">
+                <div class="row w-100 p-2">
+                  <div class="col-md-7">
+                    <div class="row w-100 ps-0 m-0">
+                      <div class="col-md-6 p-0 ps-1 pe-1">
+                        <div class="input-group input-group-outline w-100">
+                          <label class="form-label">Título</label>
+                          <input type="text" name="TituloEditar" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-6 ps-1 pe-1">
+                        <select name="CategoriaEditar" class="p-2 bg-transparent border-radius-md w-100" required>
+                          <option value="" selected>Categoria</option>
+                          <option value="Operacional">Operacional</option>
+                          <option value="Não Operacional">Não Operacional</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row w-100 m-0">
+                      <div class="col-md-6 px-1">
+                        <div class="input-group input-group-outline my-3 w-100">
+                          <label class="form-label">Valor</label>
+                          <input type="text" name="ValorEditar" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-6 px-1">
+                        <select name="qtdParcelaEditar" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                          <option value="0" selected>Qtd. Parcela</option>
+                          <option value="1">1 Parcela</option>
+                          <option value="2">2 Parcela</option>
+                          <option value="3">3 Parcela</option>
+                          <option value="4">4 Parcela</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="px-1">
+                      <select name="DestinatarioEditar" class="p-2 bg-transparent border-radius-md w-100 my-0" required>
+                        <option value="S/D" selected>Destinatário</option>
+                        <option value="amazonia">Banco da Amazônia S.A.</option>
+                        <option value="brasil">Banco do Brasil S.A.</option>
+                        <option value="brasili">Banco de Brasília S.A.</option>
+                        <option value="nordeste">Banco do Nordeste do Brasil S.A.</option>
+                        <option value="banestes">Banestes S.A.</option>
+                        <option value="banrisul">Banrisul S.A</option>
+                        <option value="bradesco">Banco Bradesco S.A.</option>
+                        <option value="caixa">Caixa Econômica Federal</option>
+                        <option value="citi">Citi S.A</option>
+                        <option value="hsbc">Hsbc S/A</option>
+                        <option value="inter">Inter S.A</option>
+                        <option value="itau">Itau S.A</option>
+                        <option value="nubank">Nu Financeira S.A.</option>
+                        <option value="original">Banco Original S.A.</option>
+                        <option value="safra">Banco Safra S.A.</option>
+                        <option value="santander">Banco Santander S.A</option>
+                        <option value="sicoob">Banco Sicoob S.A.</option>
+                        <option value="sicredi">Banco Sicredi S.A.</option>
+                        <option value="outros">Banco Desconhecido</option>
+                        <option value="S/D">Sem Destinatário</option>
+                    </select>
+                    </div>
+                    <div class="px-1">
+                      <select name="FornecedorEditar" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                        <option value="S/F" selected>Fornecedor</option>
+                        <option value="Coca-Cola Brasil">Coca-Cola Brasil</option>
+                        <option value="S/F">Sem Fornecedor</option>
+                    </select>
+                    </div>
+                    <div class="row w-100 m-0">
+                      <div class="col-md-6 px-1">
+                        <div class="input-group input-group-outline my-0 w-100 px-0">
+                          <div class="input-group">
+                            <input type="text" class="form-control m-0" aria-label="Text input with dropdown button" name="NotaFiscalEditar" placeholder="Nota Fiscal" required>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 px-1">
+                      <select name="StatusEditar" class="p-2 bg-transparent border-radius-md w-100 px-2" required>
+                        <option value="" selected>Status</option>
+                        <option value="Pendente">Pendente</option> 
+                        <option value="Efetuado">Efetuado</option>
+                      </select>
+                    </div>
+                    </div>
+                    <div class="row w-100 m-0">
+                      <div class="col-md-6 px-1">
+                        <select name="PagamentoEditar" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                          <option value="" selected>Pagamento</option>
+                          <option value="Boleto">Boleto</option>
+                          <option value="PIX">PIX</option>
+                          <option value="Crédito">Crédito</option>
+                          <option value="Débito">Débito</option>
+                      </select>
+                      </div>
+                      <div class="col-md-6 px-1">
+                        <div class="input-group input-group-outline my-3 w-100">
+                          <input type="date" class="form-control" name="DataEditar">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="row w-100 h-100 pb-3 m-0">
+                      <textarea class="border border-secondary border-radius-lg w-100 h-100" name="HistoricoEditar" cols="30" rows="10" placeholder="Histórico"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer border-0">
+              <button type="submit" class="btn btn-dark">Alterar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Fim Modal de Editar -->
+  </main>
+  <div class="fixed-plugin">
+   <!-- Botão fixo na página para adição de Entrada e Saída -->
+   <div id="button-container">
+
+    <!-- Botão de Saída -->
+    <button type="button" class="btn btn-primary button" id="despesas" data-bs-toggle="modal"
+      data-bs-target="#exampleModal" data-bs-whatever="Despesa">
+      <img src="/assets/dash/img/despesa.svg" alt="Despesa" style="width: 35px;">
+    </button>
+
+      <!-- Modal de Saída -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content bg-despesa">
+            <form action="" method="post" id="formSaidasModal">
+              <div class="modal-header border-0">
+                <h1 class="modal-title fs-5 green-text" id="exampleModalLabel2">Saída</h1>
+                <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column align-items-center">
+                <div class="row w-100 p-0 d-flex justify-content-center">
+                  <div class="row w-100 p-2">
+                    <div class="col-md-7">
+                      <div class="row w-100 ps-0 m-0">
+                        <div class="col-md-6 p-0 ps-1 pe-1">
+                          <div class="input-group input-group-outline w-100">
+                            <label class="form-label">Título</label>
+                            <input type="text" name="tituloSaida" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-md-6 ps-1 pe-1">
+                          <select name="categoriaSaida" class="p-2 bg-transparent border-radius-md w-100" required>
+                            <option value="" selected>Categoria</option>
+                            <option value="Operacional">Operacional</option>
+                            <option value="Não Operacional">Não Operacional</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row w-100 m-0">
+                        <div class="col-md-6 px-1">
+                          <div class="input-group input-group-outline my-3 w-100">
+                            <label class="form-label">Valor</label>
+                            <input type="text" name="valorSaida" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-md-6 px-1">
+                          <select name="qtdParcelaSaida" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                            <option value="0" selected>Qtd. Parcela</option>
+                            <option value="1">1 Parcela</option>
+                            <option value="2">2 Parcela</option>
+                            <option value="3">3 Parcela</option>
+                            <option value="4">4 Parcela</option>
+                        </select>
+                        </div>
+                      </div>
+                      <div class="px-1">
+                        <select name="destinatarioSaida" class="p-2 bg-transparent border-radius-md w-100 my-0" required>
+                          <option value="S/D" selected>Destinatário</option>
+                          <option value="Banco da Amazônia S.A.">Banco da Amazônia S.A.</option>
+                          <option value="Banco do Brasil S.A.">Banco do Brasil S.A.</option>
+                          <option value="Banco de Brasília S.A.">Banco de Brasília S.A.</option>
+                          <option value="Banco do Nordeste do Brasil S.A.">Banco do Nordeste do Brasil S.A.</option>
+                          <option value="Banestes S.A.">Banestes S.A.</option>
+                          <option value="Banrisul S.A">Banrisul S.A</option>
+                          <option value="Banco Bradesco S.A.">Banco Bradesco S.A.</option>
+                          <option value="Caixa Econômica Federal">Caixa Econômica Federal</option>
+                          <option value="Citi S.A">Citi S.A</option>
+                          <option value="Hsbc S/A">Hsbc S/A</option>
+                          <option value="Inter S.A">Inter S.A</option>
+                          <option value="Itau S.A">Itau S.A</option>
+                          <option value="Nu Financeira S.A.">Nu Financeira S.A.</option>
+                          <option value="Banco Original S.A.">Banco Original S.A.</option>
+                          <option value="Banco Safra S.A.">Banco Safra S.A.</option>
+                          <option value="Banco Santander S.A">Banco Santander S.A</option>
+                          <option value="Banco Sicoob S.A.">Banco Sicoob S.A.</option>
+                          <option value="Banco Sicredi S.A.">Banco Sicredi S.A.</option>
+                          <option value="Desconhecido">Desconhecido</option>
+                          <option value="S/D">Sem Destinatário</option>
+                      </select>
+                      </div>
+                      <div class="px-1">
+                        <select name="fornecedorSaida" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                          <option value="S/F" selected>Fornecedor</option>
+                          <option value="Coca-Cola Brasil">Coca-Cola Brasil</option>
+                          <option value="S/F">Sem Fornecedor</option>
+                      </select>
+                      </div>
+                      <div class="row w-100 m-0">
+                        <div class="col-md-6 px-1">
+                          <div class="input-group input-group-outline my-0 w-100 px-0">
+                            <div class="input-group">
+                              <button class="btn btn-outline-secondary dropdown-toggle p-2 m-0" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" id="Sim">Com Nota Fiscal</a></li>
+                                <li><a class="dropdown-item" id="Nao">Sem Nota Fiscal</a></li>
+                              </ul>
+                              <input type="text" class="form-control m-0" aria-label="Text input with dropdown button" name="notaFiscalSaida" placeholder="Nota Fiscal" required>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6 px-1">
+                        <select name="statusSaida" class="p-2 bg-transparent border-radius-md w-100 px-2" required>
+                          <option value="" selected>Status</option>
+                          <option value="Pendente">Pendente</option> 
+                          <option value="Efetuado">Efetuado</option>
+                        </select>
+                      </div>
+                      </div>
+                      <div class="row w-100 m-0">
+                        <div class="col-md-6 px-1">
+                          <select name="pagamentoSaida" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                            <option value="" selected>Pagamento</option>
+                            <option value="Boleto">Boleto</option>
+                            <option value="Pix">PIX</option>
+                            <option value="Crédito">Crédito</option>
+                            <option value="Débito">Débito</option>
+                            <option value="Dinheiro">Dinheiro</option>
+                        </select>
+                        </div>
+                        <div class="col-md-6 px-1">
+                          <div class="input-group input-group-outline my-3 w-100">
+                            <input type="date" class="form-control" name="dataSaida">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="row w-100 h-100 pb-3 m-0">
+                        <textarea class="border border-secondary border-radius-lg w-100 h-100" name="historicoSaida" id="escreverHistoricoSaida" cols="30" rows="10" placeholder="Histórico"></textarea>
+                      </div>
+                      <div class="row w-100 h-100 pb-3 m-0 d-none">
+                        <select name="tipoSaida">
+                          <option value="Saída" selected>Saída</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <button type="button" onclick="limparFormulario()" class="btn btn-light">Limpar</button>
+                <button type="submit" class="btn btn-dark">Registrar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    <!-- Botão de Entrada -->
+    <button type="button" class="btn btn-primary button" id="receitas" data-bs-toggle="modal"
+      data-bs-target="#exampleModal2" data-bs-whatever="Receita">
+      <img src="/assets/dash/img/receita.svg" alt="Receita" style="width: 35px;">
+    </button>
+
+      <!-- Modal de Entrada -->
+      <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content bg-receita">
+            <form action="" method="post" id="formEntradasModal">
+              <div class="modal-header border-0">
+                <h1 class="modal-title fs-5 green-text" id="exampleModalLabel2">Entrada</h1>
+                <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column align-items-center">
+                <div class="row w-100 p-0 d-flex justify-content-center">
+                  <div class="row w-100 p-2">
+                    <div class="col-md-7">
+                      <div class="row w-100 ps-0 m-0">
+                        <div class="col-md-6 p-0 ps-1 pe-1">
+                          <div class="input-group input-group-outline w-100">
+                            <label class="form-label">Título</label>
+                            <input type="text" name="tituloEntrada" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-md-6 ps-1 pe-1">
+                          <select name="categoriaEntrada" class="p-2 bg-transparent border-radius-md w-100" required>
+                            <option value="" selected>Categoria</option>
+                            <option value="Operacional">Operacional</option>
+                            <option value="Não Operacional">Não Operacional</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row w-100 m-0">
+                        <div class="col-md-6 px-1">
+                          <div class="input-group input-group-outline my-3 w-100">
+                            <label class="form-label">Valor</label>
+                            <input type="text" name="valorEntrada" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-md-6 px-1">
+                          <select name="qtdParcelaEntrada" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                            <option value="0" selected>Qtd. Parcela</option>
+                            <option value="1">1 Parcela</option>
+                            <option value="2">2 Parcela</option>
+                            <option value="3">3 Parcela</option>
+                            <option value="4">4 Parcela</option>
+                        </select>
+                        </div>
+                      </div>
+                      <div class="px-1">
+                        <select name="destinatarioEntrada" class="p-2 bg-transparent border-radius-md w-100 my-0" required>
+                          <option value="S/D" selected>Destinatário</option>
+                          <option value="Banco da Amazônia S.A.">Banco da Amazônia S.A.</option>
+                          <option value="Banco do Brasil S.A.">Banco do Brasil S.A.</option>
+                          <option value="Banco de Brasília S.A.">Banco de Brasília S.A.</option>
+                          <option value="Banco do Nordeste do Brasil S.A.">Banco do Nordeste do Brasil S.A.</option>
+                          <option value="Banestes S.A.">Banestes S.A.</option>
+                          <option value="Banrisul S.A">Banrisul S.A</option>
+                          <option value="Banco Bradesco S.A.">Banco Bradesco S.A.</option>
+                          <option value="Caixa Econômica Federal">Caixa Econômica Federal</option>
+                          <option value="Citi S.A">Citi S.A</option>
+                          <option value="Hsbc S/A">Hsbc S/A</option>
+                          <option value="Inter S.A">Inter S.A</option>
+                          <option value="Itau S.A">Itau S.A</option>
+                          <option value="Nu Financeira S.A.">Nu Financeira S.A.</option>
+                          <option value="Banco Original S.A.">Banco Original S.A.</option>
+                          <option value="Banco Safra S.A.">Banco Safra S.A.</option>
+                          <option value="Banco Santander S.A">Banco Santander S.A</option>
+                          <option value="Banco Sicoob S.A.">Banco Sicoob S.A.</option>
+                          <option value="Banco Sicredi S.A.">Banco Sicredi S.A.</option>
+                          <option value="Desconhecido">Desconhecido</option>
+                          <option value="S/D">Sem Destinatário</option>
+                      </select>
+                      </div>
+                      <div class="px-1">
+                        <select name="fornecedorEntrada" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                          <option value="S/F" selected>Fornecedor</option>
+                          <option value="Coca-Cola Brasil">Coca-Cola Brasil</option>
+                          <option value="S/F">Sem Fornecedor</option>
+                      </select>
+                      </div>
+                      <div class="row w-100 m-0">
+                        <div class="col-md-6 px-1">
+                          <div class="input-group input-group-outline my-0 w-100 px-0">
+                            <div class="input-group">
+                              <button class="btn btn-outline-secondary dropdown-toggle p-2 m-0" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" id="Sim">Com Nota Fiscal</a></li>
+                                <li><a class="dropdown-item" id="Nao">Sem Nota Fiscal</a></li>
+                              </ul>
+                              <input type="text" class="form-control m-0" aria-label="Text input with dropdown button" name="notaFiscalEntrada" placeholder="Nota Fiscal" required>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6 px-1">
+                        <select name="statusEntrada" class="p-2 bg-transparent border-radius-md w-100 px-2" required>
+                          <option value="" selected>Status</option>
+                          <option value="Pendente">Pendente</option> 
+                          <option value="Efetuado">Efetuado</option>
+                        </select>
+                      </div>
+                      </div>
+                      <div class="row w-100 m-0">
+                        <div class="col-md-6 px-1">
+                          <select name="pagamentoEntrada" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                            <option value="" selected>Pagamento</option>
+                            <option value="Boleto">Boleto</option>
+                            <option value="Pix">Pix</option>
+                            <option value="Crédito">Crédito</option>
+                            <option value="Débito">Débito</option>
+                            <option value="Dinheiro">Dinheiro</option>
+                        </select>
+                        </div>
+                        <div class="col-md-6 px-1">
+                          <div class="input-group input-group-outline my-3 w-100">
+                            <input type="date" class="form-control" name="dataEntrada">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="row w-100 h-100 pb-3 m-0">
+                        <textarea class="border border-secondary border-radius-lg w-100 h-100" name="historicoEntrada" id="escreverHistoricoEntrada" cols="30" rows="10" placeholder="Histórico"></textarea>
+                      </div>
+                      <div class="row w-100 h-100 pb-3 m-0 d-none">
+                        <select name="tipoEntrada">
+                          <option value="Entrada" selected>Entrada</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <button type="button" onclick="limparFormulario()" class="btn btn-light">Limpar</button>
+                <button type="submit" class="btn btn-dark">Registrar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    <!-- Botão Principal -->
+    <button class="button" id="money">
+      <img class="money" src="/assets/dash/img/coins.svg" alt="Money" style="width: 30px;">
+    </button>
+  </div>
+  <!-- Final do Botão fixo na página para adição de Entrada e Saída -->
+
+
+    <!-- Navbar Lateral de Configurações -->
+    <div class="card shadow-lg">
+      <div class="card-header pb-0 pt-3">
+        <div class="float-start d-flex justify-content-center mt-3">
+          <img class="w-100 img-fluid" src="/assets/dash/img/logos/logo3.png" alt="Logo Planbase">
+        </div>
+        <div class="float-end">
+          <button class="btn btn-link text-dark p-0 fixed-plugin-close-button">
+            <i class="material-icons">clear</i>
+          </button>
+        </div>
+        <!-- End Toggle Button -->
+      </div>
+      <hr class="horizontal dark my-1">
+      <div class="card-body pt-sm-3 pt-0">
+        <!-- Sidebar Backgrounds -->
+        <div>
+          <h6 class="mb-0">Temas para Escolha</h6>
+        </div>
+        <a href="javascript:void(0)" class="switch-trigger background-color">
+          <div class="badge-colors my-2 text-start">
+            <span class="badge filter bg-gradient-primary active" data-color="primary"
+              onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-dark" data-color="dark" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-info" data-color="info" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-success" data-color="success" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-warning" data-color="warning" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-danger" data-color="danger" onclick="sidebarColor(this)"></span>
+          </div>
+        </a>
+        <!-- Temas -->
+        <div class="mt-3">
+          <h6 class="mb-0">Temas</h6>
+          <p class="text-sm">Escolha essas opções para sua comodidade.</p>
+        </div>
+        <div class="d-flex">
+          <button class="btn bg-gradient-dark px-3 mb-2 active" data-class="bg-gradient-dark"
+            onclick="sidebarType(this)">Dark</button>
+          <button class="btn bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-transparent"
+            onclick="sidebarType(this)">Transparente</button>
+          <button class="btn bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-white"
+            onclick="sidebarType(this)">Branco</button>
+        </div>
+        <!-- Navbar Fixed -->
+        <hr class="horizontal dark my-3">
+        <div class="mt-2 d-flex">
+          <h6 class="mb-0">Claro / Escuro</h6>
+          <div class="form-check form-switch ps-0 ms-auto my-auto">
+            <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Navbar Lateral de Configurações Final -->
+    <!--   Core JS Files   -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/assets/dash/js/core/popper.min.js"></script>
+    <script src="/assets/dash/js/core/bootstrap.min.js"></script>
+    <script src="/assets/dash/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="/assets/dash/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="/assets/dash/js/pages/tables.js"></script>
+    <script src="/assets/dash/js/pages/modal.js"></script>
+    <script>
+      var win = navigator.platform.indexOf('Win') > -1;
+      if (win && document.querySelector('#sidenav-scrollbar')) {
+        var options = {
+          damping: '0.5'
+        }
+        Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+      }
+    </script>
+    <script>
+      const botaoPesquisar = document.getElementById("acharData");
+      const inputData = document.getElementById("dataSelecionada");
+      const linhas = document.querySelectorAll("tbody tr");
+
+      botaoPesquisar.addEventListener("click", function () {
+          filtrarLinhas();
+      });
+
+      inputData.addEventListener("input", function () {
+          mostrarLinhas();
+      });
+
+      function filtrarLinhas() {
+          const dataSelecionada = inputData.value;
+
+          linhas.forEach((linha) => {
+              const dataNaLinha = linha.querySelector("td:nth-child(2) span").textContent;
+              const dataFormatada = formatarData(dataSelecionada);
+
+              if (dataFormatada === "" || dataNaLinha === dataFormatada) {
+                  linha.style.display = "";
+              } else {
+                  linha.style.display = "none";
+              }
+          });
+      }
+
+      function mostrarLinhas() {
+          const dataSelecionada = inputData.value;
+
+          linhas.forEach((linha) => {
+              const dataNaLinha = linha.querySelector("td:nth-child(2) span").textContent;
+              const dataFormatada = formatarData(dataSelecionada);
+
+              if (dataFormatada === "") {
+                  linha.style.display = "";
+              }
+          });
+      }
+
+      function formatarData(data) {
+          if (data) {
+              const partes = data.split("-");
+              if (partes.length === 3) {
+                  const dia = partes[2];
+                  const mes = partes[1];
+                  const ano = partes[0];
+                  return `${dia}/${mes}/${ano}`;
+              }
+          }
+          return "";
+      }
+    </script>
+    <!-- Github buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="/assets/dash/js/material-dashboard.min.js"></script>
+    <!-- Conexão com o Back-end via Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Resgata todos os registros do banco -->
+    <script src="/assets/dash/js/connection/tables/registrosAll.js"></script>
+    <!-- Insere os dados do modal de entrada, saída e editar no banco -->
+    <script src="/assets/dash/js/connection/modalEntrada.js"></script>
+    <script src="/assets/dash/js/connection/modalSaida.js"></script>
+    <script src="/assets/dash/js/connection/modalEditar.js"></script>
+</body>
+
+</html>

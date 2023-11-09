@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="planbase" sizes="100x100" href="/assets/dash/img/logos/logo-planbase100x100.svg">
+  <link rel="icon" type="image/png" href="/assets/dash/img/logos/logo-planbase100x100.svg">
+  <title>
+    PlanBase - Adm Login
+  </title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Nucleo Icons -->
+  <link href="/assets/dash/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="/assets/dash/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- CSS Files -->
+  <link id="pagestyle" href="/assets/dash/css/material-dashboard.css?v=3.1.0" rel="stylesheet" />
+  <!-- Nepcha Analytics (nepcha.com) -->
+  <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
+  <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+</head>
+
+<body class="bg-gray-200">
+  <!-- Content -->
+  <a href="/" class="sair position-absolute d-flex z-index-3" style="left: 0.5em; top: .5em;">
+    <img src="/assets/dash/img/icons/sair.svg" alt="Voltar" title="Voltar" style="width: 2.5em;">
+  </a>
+  <main class="main-content  mt-0">
+    <div class="page-header align-items-start min-vh-100 img-fluid" style="background-image: url('/assets/dash/img/background-adm.jpg')">
+      <span class="mask bg-gradient-dark opacity-6"></span>
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-4 col-md-8 col-12 mx-auto">
+            <div class="card z-index-0 fadeIn3 fadeInBottom">
+              <div class="card-header p-0 position-relative mt-n4 d-flex justify-content-center z-index-2 w-100">
+                <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 w-75 d-flex justify-content-center">
+                  <div class="row my-3 d-flex justify-content-center">
+                    <img class="w-75" src="/assets/dash/img/logo-login.svg" alt="Logo Planbase">
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="text-center">Login | Admin</h5>
+                <form role="form" class="text-start">
+                  <div class="input-group input-group-outline my-3">
+                    <label class="form-label">Matrícula</label>
+                    <input type="email" class="form-control">
+                  </div>
+                  <div class="input-group input-group-outline mb-3">
+                    <label class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="pass-adm-login">
+                  </div>
+                  <div class="form-check form-check-info text-start ps-0">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Mostrar Senha
+                    </label>
+                  </div>
+                  <div class="text-center">
+                    <a href="/adm/cadastro/" type="submit" class="btn bg-gradient-primary w-75 my-4 mb-2">Entrar</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Footer -->
+      <footer class="footer position-absolute bottom-2 py-2 w-100">
+        <div class="container">
+          <div class="row align-items-center justify-content-lg-center">
+            <div class="col-12 col-md-12 my-auto">
+              <div class="copyright text-center text-sm text-white text-lg-center">
+                Copyright
+                <a href="#" class="font-weight-bold text-white" target="_blank">Planbase | Adm</a>
+                © <script>
+                  document.write(new Date().getFullYear())
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer End -->
+      
+    </div>
+  </main>
+<!-- Content End -->
+
+
+  <!--   Core JS Files   -->
+  <script src="/assets/dash/js/core/popper.min.js"></script>
+  <script src="/assets/dash/js/core/bootstrap.min.js"></script>
+  <script src="/assets/dash/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="/assets/dash/js/plugins/smooth-scrollbar.min.js"></script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+    <script>
+      function mostrarSenha(senhaId, checkId) {
+      const senhaInput = document.getElementById(senhaId);
+      const check = document.getElementById(checkId);
+
+      check.addEventListener('change', function () {
+          if (check.checked) {
+          senhaInput.type = 'text';
+          } else {
+          senhaInput.type = 'password';
+          }
+      });
+  }
+  mostrarSenha('pass-adm-login','flexCheckDefault')
+</script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="/assets/dash/js/material-dashboard.min.js?v=3.1.0"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/assets/dash/js/connection/adm/login/auth/authLogin.js"></script>
+  <script src="/assets/dash/js/connection/adm/login/login.js"></script>
+</body>
+
+</html>

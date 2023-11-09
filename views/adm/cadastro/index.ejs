@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="planbase" sizes="100x100" href="/assets/dash/img/logos/logo-planbase100x100.svg">
+  <link rel="icon" type="image/png" href="/assets/dash/img/logos/logo-planbase100x100.svg">
+  <title>
+    PlanBase - Adm Cadastro
+  </title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Nucleo Icons -->
+  <link href="/assets/dash/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="/assets/dash/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- CSS Files -->
+  <link id="pagestyle" href="/assets/dash/css/material-dashboard.css?v=3.1.0" rel="stylesheet" />
+  <!-- Nepcha Analytics (nepcha.com) -->
+  <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
+  <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+</head>
+
+<body class="bg-gray-200">
+  <!-- Content -->
+  <main class="main-content  mt-0">
+    <div class="page-header align-items-start min-vh-100 img-fluid" style="background-image: url('/assets/dash/img/background-adm.jpg')">
+      <span class="mask bg-gradient-dark opacity-6"></span>
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-4 col-md-8 col-12 mx-auto">
+            <div class="card z-index-0 fadeIn3 fadeInBottom">
+              <div class="card-body position-relative">
+                <a href="/adm/login/" class="logout position-absolute" style="top: 30px;">
+                    <img src="/assets/dash/img/icons/logout.svg" alt="Logout" title="Encerrar Sessão">
+                </a>
+                <h3 class="text-center">Painel | Admin</h3>
+                <form role="form" class="text-start">
+                    <h6 class="text-center mt-5">Cadastrar</h6>
+                  <div class="text-center">
+                    <a href="/adm/cadastro/form" type="submit" class="btn bg-gradient-primary w-75 mb-2">Novo Usuário</a>
+                  </div>
+                    <h6 class="text-center">Permissão</h6>
+                  <div class="text-center">
+                    <a href="/adm/cadastro/permissao" type="submit" class="btn bg-gradient-primary w-75 mb-2">Permitir Usuário</a>
+                  </div>
+                  <footer class="text-center mt-6">
+                    Planbase | Admin © 2023 
+                  </footer>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+<!-- Content End -->
+
+
+  <!--   Core JS Files   -->
+  <script src="/assets/dash/js/core/popper.min.js"></script>
+  <script src="/assets/dash/js/core/bootstrap.min.js"></script>
+  <script src="/assets/dash/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="/assets/dash/js/plugins/smooth-scrollbar.min.js"></script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="/assets/dash/js/material-dashboard.min.js?v=3.1.0"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/assets/dash/js/connection/adm/cadastro/auth/authCadastroIndex.js"></script>
+</body>
+
+</html>
