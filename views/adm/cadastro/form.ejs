@@ -158,9 +158,9 @@
 
                             <!-- Data de Nascimento -->
                             <div class="input-receita mb-3">
-                                <input class="inpt-receita-el" type="date" name="Data" autocomplete="off"
+                                <input class="inpt-receita-el" type="date" name="Nascimento" autocomplete="off"
                                   class="input">
-                                <label class="user-label-receita">Data</label>
+                                <label class="user-label-receita">Nascimento</label>
                               </div>
 
                             <!-- Cidade -->
@@ -174,16 +174,7 @@
                             <div class="input-receita mb-3">
                                 <select name="País" class="w-100 p-2 inpt-receita-el">
                                     <option value="">País</option>
-                                    <option value="BR">Brasil</option>
-                                    <option value="US">Estados Unidos</option>
-                                    <option value="CA">Canadá</option>
-                                    <option value="JP">Japão</option>
-                                    <option value="FR">França</option>
-                                    <option value="DE">Alemanha</option>
-                                    <option value="IN">Índia</option>
-                                    <option value="CN">China</option>
-                                    <option value="ZA">África do Sul</option>
-                                    <option value="AU">Austrália</option>
+                                    <option value="Brasil">Brasil</option>
                                 </select>
                                 <label class="user-label-receita">País</label>
                             </div>
@@ -200,7 +191,7 @@
 
                             <!-- Data Ínicio -->
                             <div class="input-receita mb-3">
-                                <input class="inpt-receita-el" type="date" name="Data Ínicio" autocomplete="off"
+                                <input class="inpt-receita-el" type="date" name="DataÍnicio" autocomplete="off"
                                   class="input">
                                 <label class="user-label-receita">Data Ínicio</label>
                               </div>
@@ -235,7 +226,7 @@
 
                           <!-- Confirmar Senha -->
                           <div class="input-receita mb-3">
-                            <input class="inpt-receita-el" type="password" name="Confirmar Senha" id="confirmSenha" autocomplete="off"
+                            <input class="inpt-receita-el" type="password" name="ConfirmarSenha" id="confirmSenha" autocomplete="off"
                               class="input">
                             <label class="user-label-receita">Confirmar Senha</label>
                           </div>
@@ -350,8 +341,13 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="/assets/dash/js/material-dashboard.min.js?v=3.1.0"></script>
+  <!-- Faz a conexão com o Back-end -->
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="/assets/dash/js/connection/adm/cadastro/auth/authCadastroForm.js"></script>
+  <!-- Verifica se o usuario tem autenticação para acessar a página -->
+  <!-- <script src="/assets/dash/js/connection/adm/cadastro/auth/authCadastroForm.js"></script> -->
+
+  <!-- Insere o usuário na tabela de usuario -->
+  <script src="/assets/dash/js/connection/adm/cadastro/formCadastro.js"></script>
 </body>
 
 </html>

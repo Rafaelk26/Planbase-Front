@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    const fornecedores = [];
-
     const admMatricula = 'mb'; 
     const admSenha = 'sb'; 
 
@@ -21,8 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
             Contato: contatoFornecedor
         };
 
-        fornecedores.push(fornecedor);
-
         createFornecedorCard(fornecedor, fornecedorID);
 
         fornecedorID++;
@@ -38,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const newCard = document.createElement('div');
         newCard.className = 'col-md-6 list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg';
     
-        newCard.id = `fornecedor-${id}`;
+        newCard.id = `${id}`;
     
         newCard.innerHTML = `
             <div class="d-flex flex-column">
@@ -90,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Função para remover o card do DOM
     function removerFornecedorDoDOM(id) {
-        const fornecedorParaOcultar = document.getElementById(`fornecedor-${id}`);
+        const fornecedorParaOcultar = document.getElementById(`${id}`);
         if (fornecedorParaOcultar) {
             fornecedorParaOcultar.remove();
         }

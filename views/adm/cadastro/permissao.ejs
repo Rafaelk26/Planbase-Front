@@ -143,51 +143,54 @@
 <!-- Content End -->
 
 
-<!--   Core JS Files   -->
-<script src="/assets/dash/js/core/popper.min.js"></script>
-<script src="/assets/dash/js/core/bootstrap.min.js"></script>
-<script src="/assets/dash/js/plugins/perfect-scrollbar.min.js"></script>
-<script src="/assets/dash/js/plugins/smooth-scrollbar.min.js"></script>
-<script>
-var win = navigator.platform.indexOf('Win') > -1;
-if (win && document.querySelector('#sidenav-scrollbar')) {
-    var options = {
-        damping: '0.5'
+    <!--   Core JS Files   -->
+    <script src="/assets/dash/js/core/popper.min.js"></script>
+    <script src="/assets/dash/js/core/bootstrap.min.js"></script>
+    <script src="/assets/dash/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="/assets/dash/js/plugins/smooth-scrollbar.min.js"></script>
+    <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+        var options = {
+            damping: '0.5'
+        }
+        Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
     }
-    Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
-}
-</script>
-<!-- Github buttons -->
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-<!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-<script src="/assets/dash/js/material-dashboard.min.js?v=3.1.0"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="/assets/dash/js/connection/adm/cadastro/auth/authCadastroPerm.js"></script>
-<script>
-function alterarBotao(event) {
-    const botao = event.target;
-    const nomeUsuario = botao.getAttribute('data-nome');
+    </script>
+    <!-- Github buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="/assets/dash/js/material-dashboard.min.js?v=3.1.0"></script>
+    <script src="/assets/dash/js/connection/adm/cadastro/auth/authCadastroPerm.js"></script>
+    <script>
+    function alterarBotao(event) {
+        const botao = event.target;
+        const nomeUsuario = botao.getAttribute('data-nome');
 
-    if (botao.classList.contains('btn-dark')) {
-        botao.classList.remove('btn-dark');
-        botao.classList.add('btn-success');
-        botao.textContent = 'Permitido';
+        if (botao.classList.contains('btn-dark')) {
+            botao.classList.remove('btn-dark');
+            botao.classList.add('btn-success');
+            botao.textContent = 'Permitido';
 
-        console.log(`${nomeUsuario} é um administrador.`);
+            console.log(`${nomeUsuario} é um administrador.`);
 
-    } else {
-        botao.classList.remove('btn-success');
-        botao.classList.add('btn-dark');
-        botao.textContent = 'Permitir';
+        } else {
+            botao.classList.remove('btn-success');
+            botao.classList.add('btn-dark');
+            botao.textContent = 'Permitir';
 
-        console.log(`${nomeUsuario} não é mais um administrador.`);
+            console.log(`${nomeUsuario} não é mais um administrador.`);
+        }
     }
-}
 
-const botoes = document.querySelectorAll('.permitir-button');
-botoes.forEach(botao => {
-    botao.addEventListener('click', alterarBotao);
-});
-</script>
+    const botoes = document.querySelectorAll('.permitir-button');
+    botoes.forEach(botao => {
+        botao.addEventListener('click', alterarBotao);
+    });
+    </script>
+  <!-- Faz a conexão com o Back-end -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <!-- Recupera os dados da tabela usuario -->
+  <script src="/assets/dash/js/connection/adm/cadastro/getUsersPerm.js"></script>
 </body>
 </html>

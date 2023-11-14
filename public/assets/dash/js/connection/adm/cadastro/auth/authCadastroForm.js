@@ -1,8 +1,6 @@
-// Arquivo JavaScript da página de login (login.js, por exemplo)
 document.addEventListener("DOMContentLoaded", (event) => {
-    // Este código será executado quando a página for carregada
 
-    axios.get('http://locahost:3001/api/adm/cadastro/')
+    axios.get('http://locahost:3001/api/adm/cadastro/user/')
       .then(response => {
         if (response.data === 'Acesso não autorizado') {
             alert('Acesso não autorizado, você não possui permissão.');

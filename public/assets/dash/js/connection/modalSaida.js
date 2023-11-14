@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   
       try {
         const response = await axios.post('http://localhost:3001/api/registros/saidas', formData);
-        console.log(response);
       } catch (error) {
         console.error(error);
       }

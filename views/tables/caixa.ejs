@@ -586,161 +586,143 @@ id="sidenav-main">
 <!-- Botão fixo na página para adição de Entrada e Saída -->
 <div id="button-container">
 
-  <!-- Botão de Saída -->
-  <button type="button" class="btn btn-primary button" id="despesas" data-bs-toggle="modal"
-    data-bs-target="#exampleModal" data-bs-whatever="Despesa">
-    <img src="/assets/dash/img/despesa.svg" alt="Despesa" style="width: 35px;">
-  </button>
+      <!-- Botão de Saída -->
+      <button type="button" class="btn btn-primary button" id="despesas" data-bs-toggle="modal"
+        data-bs-target="#exampleModal" data-bs-whatever="Despesa">
+        <img src="/assets/dash/img/despesa.svg" alt="Despesa" style="width: 35px;">
+      </button>
 
-  <!-- Modal de Saída -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content bg-despesa">
-        <form action="" method="post" id="formSaidasModal">
-          <div class="modal-header border-0">
-            <h1 class="modal-title fs-5 green-text" id="exampleModalLabel2">Saída</h1>
-            <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body d-flex flex-column align-items-center">
-            <div class="row w-100 p-0 d-flex justify-content-center">
-              <div class="row w-100 p-2">
-                <div class="col-md-7">
-                  <div class="row w-100 ps-0 m-0">
-                    <div class="col-md-6 p-0 ps-1 pe-1">
-                      <div class="input-group input-group-outline w-100">
-                        <label class="form-label">Título</label>
-                        <input type="text" name="tituloSaida" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-md-6 ps-1 pe-1">
-                      <select name="categoriaSaida" class="p-2 bg-transparent border-radius-md w-100" required>
-                        <option value="" selected>Categoria</option>
-                        <option value="Operacional">Operacional</option>
-                        <option value="Não Operacional">Não Operacional</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="row w-100 m-0">
-                    <div class="col-md-6 px-1">
-                      <div class="input-group input-group-outline my-3 w-100">
-                        <label class="form-label">Valor</label>
-                        <input type="text" name="valorSaida" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-md-6 px-1">
-                      <select name="qtdParcelaSaida" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
-                        <option value="0" selected>Qtd. Parcela</option>
-                        <option value="1">1 Parcela</option>
-                        <option value="2">2 Parcela</option>
-                        <option value="3">3 Parcela</option>
-                        <option value="4">4 Parcela</option>
-                    </select>
-                    </div>
-                  </div>
-                  <div class="px-1">
-                    <select name="destinatarioSaida" class="p-2 bg-transparent border-radius-md w-100 my-0" required>
-                      <option value="S/D" selected>Destinatário</option>
-                      <option value="Banco da Amazônia S.A.">Banco da Amazônia S.A.</option>
-                      <option value="Banco do Brasil S.A.">Banco do Brasil S.A.</option>
-                      <option value="Banco de Brasília S.A.">Banco de Brasília S.A.</option>
-                      <option value="Banco do Nordeste do Brasil S.A.">Banco do Nordeste do Brasil S.A.</option>
-                      <option value="Banestes S.A.">Banestes S.A.</option>
-                      <option value="Banrisul S.A">Banrisul S.A</option>
-                      <option value="Banco Bradesco S.A.">Banco Bradesco S.A.</option>
-                      <option value="Caixa Econômica Federal">Caixa Econômica Federal</option>
-                      <option value="Citi S.A">Citi S.A</option>
-                      <option value="Hsbc S/A">Hsbc S/A</option>
-                      <option value="Inter S.A">Inter S.A</option>
-                      <option value="Itau S.A">Itau S.A</option>
-                      <option value="Nu Financeira S.A.">Nu Financeira S.A.</option>
-                      <option value="Banco Original S.A.">Banco Original S.A.</option>
-                      <option value="Banco Safra S.A.">Banco Safra S.A.</option>
-                      <option value="Banco Santander S.A">Banco Santander S.A</option>
-                      <option value="Banco Sicoob S.A.">Banco Sicoob S.A.</option>
-                      <option value="Banco Sicredi S.A.">Banco Sicredi S.A.</option>
-                      <option value="Desconhecido">Desconhecido</option>
-                      <option value="S/D">Sem Destinatário</option>
-                  </select>
-                  </div>
-                  <div class="px-1">
-                    <select name="fornecedorSaida" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
-                      <option value="S/F" selected>Fornecedor</option>
-                      <option value="Coca-Cola Brasil">Coca-Cola Brasil</option>
-                      <option value="S/F">Sem Fornecedor</option>
-                  </select>
-                  </div>
-                  <div class="row w-100 m-0">
-                    <div class="col-md-6 px-1">
-                      <div class="input-group input-group-outline my-0 w-100 px-0">
-                        <div class="input-group">
-                          <button class="btn btn-outline-secondary dropdown-toggle p-2 m-0" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                          <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" id="Sim">Com Nota Fiscal</a></li>
-                            <li><a class="dropdown-item" id="Nao">Sem Nota Fiscal</a></li>
-                          </ul>
-                          <input type="text" class="form-control m-0" aria-label="Text input with dropdown button" name="notaFiscalSaida" placeholder="Nota Fiscal" required>
+      <!-- Modal de Saída -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content bg-despesa">
+            <form action="" method="post" id="formSaidasModal">
+              <div class="modal-header border-0">
+                <h1 class="modal-title fs-5 green-text" id="exampleModalLabel2">Saída</h1>
+                <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column align-items-center">
+                <div class="row w-100 p-0 d-flex justify-content-center">
+                  <div class="row w-100 p-2">
+                    <div class="col-md-7">
+                      <div class="row w-100 ps-0 m-0">
+                        <div class="col-md-6 p-0 ps-1 pe-1">
+                          <div class="input-group input-group-outline w-100">
+                            <label class="form-label">Título</label>
+                            <input type="text" name="tituloSaida" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-md-6 ps-1 pe-1">
+                          <select name="categoriaSaida" class="p-2 bg-transparent border-radius-md w-100" required>
+                            <option value="" selected>Categoria</option>
+                            <option value="Operacional">Operacional</option>
+                            <option value="Não Operacional">Não Operacional</option>
+                          </select>
                         </div>
                       </div>
-                  </div>
-                  <div class="col-md-6 px-1">
-                    <select name="statusSaida" class="p-2 bg-transparent border-radius-md w-100 px-2" required>
-                      <option value="" selected>Status</option>
-                      <option value="Pendente">Pendente</option> 
-                      <option value="Efetuado">Efetuado</option>
-                    </select>
-                  </div>
-                  </div>
-                  <div class="row w-100 m-0">
-                    <div class="col-md-6 px-1">
-                      <select name="pagamentoSaida" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
-                        <option value="" selected>Pagamento</option>
-                        <option value="Boleto">Boleto</option>
-                        <option value="Pix">PIX</option>
-                        <option value="Crédito">Crédito</option>
-                        <option value="Débito">Débito</option>
-                        <option value="Dinheiro">Dinheiro</option>
-                    </select>
-                    </div>
-                    <div class="col-md-6 px-1">
-                      <div class="input-group input-group-outline my-3 w-100">
-                        <input type="date" class="form-control" name="dataSaida">
+                      <div class="row w-100 m-0">
+                        <div class="col-md-6 px-1">
+                          <div class="input-group input-group-outline my-3 w-100">
+                            <label class="form-label">Valor</label>
+                            <input type="text" name="valorSaida" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-md-6 px-1">
+                          <select name="qtdParcelaSaida" class="p-2 bg-transparent border-radius-md w-100 my-3"
+                            required>
+                            <option value="0" selected>Qtd. Parcela</option>
+                            <option value="1">1 Parcela</option>
+                            <option value="2">2 Parcela</option>
+                            <option value="3">3 Parcela</option>
+                            <option value="4">4 Parcela</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="px-1">
+                      <!-- inserir este select no modal de saida -->
+                      <select id="destinatarioSaida" name="destinatarioSaida" class="p-2 bg-transparent border-radius-md w-100 my-0"
+                      required></select>
+                      </div>
+                      <div class="px-1">
+                        <select id="fornecedorSaida" name="fornecedorSaida" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                          <option value="0" selected>Fornecedor</option>
+                        </select>
+                      </div>
+                      <div class="row w-100 m-0">
+                        <div class="col-md-6 px-1">
+                          <div class="input-group input-group-outline my-0 w-100 px-0">
+                            <div class="input-group">
+                              <button class="btn btn-outline-secondary dropdown-toggle p-2 m-0" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"></button>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" id="Sim">Com Nota Fiscal</a></li>
+                                <li><a class="dropdown-item" id="Nao">Sem Nota Fiscal</a></li>
+                              </ul>
+                              <input type="text" class="form-control m-0" aria-label="Text input with dropdown button"
+                                name="notaFiscalSaida" placeholder="Nota Fiscal" required>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 px-1">
+                          <select name="statusSaida" class="p-2 bg-transparent border-radius-md w-100 px-2" required>
+                            <option value="" selected>Status</option>
+                            <option value="Pendente">Pendente</option>
+                            <option value="Efetuado">Efetuado</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row w-100 m-0">
+                        <div class="col-md-6 px-1">
+                          <select name="pagamentoSaida" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                            <option value="" selected>Pagamento</option>
+                            <option value="Boleto">Boleto</option>
+                            <option value="Pix">PIX</option>
+                            <option value="Crédito">Crédito</option>
+                            <option value="Débito">Débito</option>
+                            <option value="Dinheiro">Dinheiro</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 px-1">
+                          <div class="input-group input-group-outline my-3 w-100">
+                            <input type="date" class="form-control" name="dataSaida">
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="col-md-5">
-                  <div class="row w-100 h-100 pb-3 m-0">
-                    <textarea class="border border-secondary border-radius-lg w-100 h-100" name="historicoSaida" id="escreverHistoricoSaida" cols="30" rows="10" placeholder="Histórico"></textarea>
-                  </div>
-                  <div class="row w-100 h-100 pb-3 m-0 d-none">
-                    <select name="tipoSaida">
-                      <option value="Saída" selected>Saída</option>
-                    </select>
+                    <div class="col-md-5">
+                      <div class="row w-100 h-100 pb-3 m-0">
+                        <textarea class="border border-secondary border-radius-lg w-100 h-100" name="historicoSaida"
+                          id="escreverHistoricoSaida" cols="30" rows="10" placeholder="Histórico"></textarea>
+                      </div>
+                      <div class="row w-100 h-100 pb-3 m-0 d-none">
+                        <select name="tipoSaida">
+                          <option value="Saída" selected>Saída</option>
+                        </select>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+              <div class="modal-footer border-0">
+                <button type="button" onclick="limparFormulario()" class="btn btn-light">Limpar</button>
+                <button type="submit" class="btn btn-dark">Registrar</button>
+              </div>
+            </form>
           </div>
-          <div class="modal-footer border-0">
-            <button type="button" onclick="limparFormulario()" class="btn btn-light">Limpar</button>
-            <button type="submit" class="btn btn-dark">Registrar</button>
-          </div>
-        </form>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <!-- Botão de Entrada -->
-  <button type="button" class="btn btn-primary button" id="receitas" data-bs-toggle="modal"
-    data-bs-target="#exampleModal2" data-bs-whatever="Receita">
-    <img src="/assets/dash/img/receita.svg" alt="Receita" style="width: 35px;">
-  </button>
+      <!-- Botão de Entrada -->
+      <button type="button" class="btn btn-primary button" id="receitas" data-bs-toggle="modal"
+        data-bs-target="#exampleModal2" data-bs-whatever="Receita">
+        <img src="/assets/dash/img/receita.svg" alt="Receita" style="width: 35px;">
+      </button>
 
       <!-- Modal de Entrada -->
       <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content bg-receita">
-            <form action="" method="post" id="formEntradasModal">
+            <form action="/" method="post" id="formEntradasModal">
               <div class="modal-header border-0">
                 <h1 class="modal-title fs-5 green-text" id="exampleModalLabel2">Entrada</h1>
                 <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -772,78 +754,61 @@ id="sidenav-main">
                           </div>
                         </div>
                         <div class="col-md-6 px-1">
-                          <select name="qtdParcelaEntrada" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                          <select name="qtdParcelaEntrada" class="p-2 bg-transparent border-radius-md w-100 my-3"
+                            required>
                             <option value="0" selected>Qtd. Parcela</option>
                             <option value="1">1 Parcela</option>
                             <option value="2">2 Parcela</option>
                             <option value="3">3 Parcela</option>
                             <option value="4">4 Parcela</option>
-                        </select>
+                          </select>
                         </div>
                       </div>
                       <div class="px-1">
-                        <select name="destinatarioEntrada" class="p-2 bg-transparent border-radius-md w-100 my-0" required>
-                          <option value="S/D" selected>Destinatário</option>
-                          <option value="Banco da Amazônia S.A.">Banco da Amazônia S.A.</option>
-                          <option value="Banco do Brasil S.A.">Banco do Brasil S.A.</option>
-                          <option value="Banco de Brasília S.A.">Banco de Brasília S.A.</option>
-                          <option value="Banco do Nordeste do Brasil S.A.">Banco do Nordeste do Brasil S.A.</option>
-                          <option value="Banestes S.A.">Banestes S.A.</option>
-                          <option value="Banrisul S.A">Banrisul S.A</option>
-                          <option value="Banco Bradesco S.A.">Banco Bradesco S.A.</option>
-                          <option value="Caixa Econômica Federal">Caixa Econômica Federal</option>
-                          <option value="Citi S.A">Citi S.A</option>
-                          <option value="Hsbc S/A">Hsbc S/A</option>
-                          <option value="Inter S.A">Inter S.A</option>
-                          <option value="Itau S.A">Itau S.A</option>
-                          <option value="Nu Financeira S.A.">Nu Financeira S.A.</option>
-                          <option value="Banco Original S.A.">Banco Original S.A.</option>
-                          <option value="Banco Safra S.A.">Banco Safra S.A.</option>
-                          <option value="Banco Santander S.A">Banco Santander S.A</option>
-                          <option value="Banco Sicoob S.A.">Banco Sicoob S.A.</option>
-                          <option value="Banco Sicredi S.A.">Banco Sicredi S.A.</option>
-                          <option value="Desconhecido">Desconhecido</option>
-                          <option value="S/D">Sem Destinatário</option>
-                      </select>
+                        <!-- inserir este select no modal de entradas -->
+                        <select id="destinatarioEntrada" name="destinatarioEntrada" class="p-2 bg-transparent border-radius-md w-100 my-0"
+                          required></select>          
                       </div>
                       <div class="px-1">
-                        <select name="fornecedorEntrada" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
-                          <option value="S/F" selected>Fornecedor</option>
-                          <option value="Coca-Cola Brasil">Coca-Cola Brasil</option>
-                          <option value="S/F">Sem Fornecedor</option>
-                      </select>
+                        <select id="fornecedorEntrada" name="fornecedorEntrada" class="p-2 bg-transparent border-radius-md w-100 my-3"
+                          required>
+                          <option value="0" selected>Fornecedor</option>
+                        </select>
                       </div>
                       <div class="row w-100 m-0">
                         <div class="col-md-6 px-1">
                           <div class="input-group input-group-outline my-0 w-100 px-0">
                             <div class="input-group">
-                              <button class="btn btn-outline-secondary dropdown-toggle p-2 m-0" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                              <button class="btn btn-outline-secondary dropdown-toggle p-2 m-0" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"></button>
                               <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" id="Sim">Com Nota Fiscal</a></li>
                                 <li><a class="dropdown-item" id="Nao">Sem Nota Fiscal</a></li>
                               </ul>
-                              <input type="text" class="form-control m-0" aria-label="Text input with dropdown button" name="notaFiscalEntrada" placeholder="Nota Fiscal" required>
+                              <input type="text" class="form-control m-0" aria-label="Text input with dropdown button"
+                                name="notaFiscalEntrada" placeholder="Nota Fiscal" required>
                             </div>
                           </div>
-                      </div>
-                      <div class="col-md-6 px-1">
-                        <select name="statusEntrada" class="p-2 bg-transparent border-radius-md w-100 px-2" required>
-                          <option value="" selected>Status</option>
-                          <option value="Pendente">Pendente</option> 
-                          <option value="Efetuado">Efetuado</option>
-                        </select>
-                      </div>
+                        </div>
+                        <div class="col-md-6 px-1">
+                          <select name="statusEntrada" class="p-2 bg-transparent border-radius-md w-100 px-2" required>
+                            <option value="" selected>Status</option>
+                            <option value="Pendente">Pendente</option>
+                            <option value="Efetuado">Efetuado</option>
+                          </select>
+                        </div>
                       </div>
                       <div class="row w-100 m-0">
                         <div class="col-md-6 px-1">
-                          <select name="pagamentoEntrada" class="p-2 bg-transparent border-radius-md w-100 my-3" required>
+                          <select name="pagamentoEntrada" class="p-2 bg-transparent border-radius-md w-100 my-3"
+                            required>
                             <option value="" selected>Pagamento</option>
                             <option value="Boleto">Boleto</option>
                             <option value="Pix">Pix</option>
                             <option value="Crédito">Crédito</option>
                             <option value="Débito">Débito</option>
                             <option value="Dinheiro">Dinheiro</option>
-                        </select>
+                          </select>
                         </div>
                         <div class="col-md-6 px-1">
                           <div class="input-group input-group-outline my-3 w-100">
@@ -854,7 +819,8 @@ id="sidenav-main">
                     </div>
                     <div class="col-md-5">
                       <div class="row w-100 h-100 pb-3 m-0">
-                        <textarea class="border border-secondary border-radius-lg w-100 h-100" name="historicoEntrada" id="escreverHistoricoEntrada" cols="30" rows="10" placeholder="Histórico"></textarea>
+                        <textarea class="border border-secondary border-radius-lg w-100 h-100" name="historicoEntrada"
+                          id="escreverHistoricoEntrada" cols="30" rows="10" placeholder="Histórico"></textarea>
                       </div>
                       <div class="row w-100 h-100 pb-3 m-0 d-none">
                         <select name="tipoEntrada">
@@ -874,12 +840,12 @@ id="sidenav-main">
         </div>
       </div>
 
-  <!-- Botão Principal -->
-  <button class="button" id="money">
-    <img class="money" src="/assets/dash/img/coins.svg" alt="Money" style="width: 30px;">
-  </button>
-</div>
-<!-- Final do Botão fixo na página para adição de Entrada e Saída -->
+      <!-- Botão Principal -->
+      <button class="button" id="money">
+        <img class="money" src="/assets/dash/img/coins.svg" alt="Money" style="width: 30px;">
+      </button>
+    </div>
+    <!-- Final do Botão fixo na página para adição de Entrada e Saída -->
 
 
     <!-- Navbar Lateral de Configurações -->
@@ -1019,6 +985,9 @@ id="sidenav-main">
     <!-- Insere os dados do modal de entrada e saída no banco -->
     <script src="/assets/dash/js/connection/modalEntrada.js"></script>
     <script src="/assets/dash/js/connection/modalSaida.js"></script>
+    <!-- Resgataar do banco os fornecedores e bancos cadastrados -->
+    <script src="/assets/dash/js/connection/index/optionsForn.js"></script>
+    <script src="/assets/dash/js/connection/index/optionsBanks.js"></script>
 </body>
 
 </html>

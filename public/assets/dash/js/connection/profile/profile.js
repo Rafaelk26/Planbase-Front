@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", (event) => {
 
-    axios.get('http://localhost:3001/api/perfil/1')
+    axios.get('http://localhost:3001/api/perfil/')
         .then(function (response) {
-            // console.log(response);
             const { nome, nomeCompleto, email, bio, cargo, telefone } = response.data[0];
 
             document.querySelector("#nome").textContent = nome;

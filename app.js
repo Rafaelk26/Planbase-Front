@@ -17,7 +17,6 @@ const billingRouter = require('./routes/billing');
 const profileRouter = require('./routes/count');
 const faqRouter = require('./routes/faq');
 const devsRouter = require('./routes/devs')
-const admLoginRouter = require('./routes/login-adm');
 const admCadIndexRouter = require('./routes/index-adm');
 const admCadFormRouter = require('./routes/form-adm');
 const admPermissaoRouter = require('./routes/permissao');
@@ -46,7 +45,6 @@ app.use('/billing', billingRouter);
 app.use('/profile', profileRouter);
 app.use('/faq', faqRouter);
 app.use('/devs', devsRouter);
-app.use('/adm/login/', admLoginRouter);
 app.use('/adm/cadastro/', admCadIndexRouter);
 app.use('/adm/cadastro/form', admCadFormRouter);
 app.use('/adm/cadastro/permissao', admPermissaoRouter);

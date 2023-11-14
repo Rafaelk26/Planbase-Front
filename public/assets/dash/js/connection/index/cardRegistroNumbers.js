@@ -9,7 +9,7 @@ function obterNumerosdeRegistros() {
       numbersElement.textContent = numerosRegistrados;
     })
     .catch((error) => {
-      alert('Erro ao obter os números dos registros:', error);
+      console.error('Erro ao obter os números dos registros:', error);
     });
 }
 

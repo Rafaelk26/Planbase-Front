@@ -23,9 +23,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
   
       try {
         const response = await axios.post('http://localhost:3001/api/registros/entradas', formData);
-        alert(response);
       } catch (error) {
-        alert(error);
+        console.error(error);
       }
   
     });
